@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="all_stops">
+        <item>永田 Nagata</item>
+        <item>田舎浜 Inakahama</item>
+        <item>吉田 Yoshida</item>
+        <item>一奏 Issou</item>
+        <item>志戸子 Shitoko</item>
+        <item>深川 Fukagawa</item>
+        <item>宮之浦港 Miyanoura Minato (Port)</item>
+        <item>宮之浦港入口 Miyanourako Iriguchi</item>
+        <item>宮之浦 Miyanoura</item>
+        <item>小原町 Oharamachi</item>
+        <item>Aコープ前 A-coop Mae</item>
+        <item>宮之浦小前 Miyanoura Sho-Mae</item>
+        <item>旭町 Asahimachi</item>
+        <item>薄皮 kusukawa</item>
+        <item>椨川 Tabugawa</item>
+        <item>小瀬田 Koseda</item>
+        <item>空港前 Kukomae</item>
+        <item>空港 Airport</item>
+        <item>早崎 Hayasaki</item>
+        <item>永久保 Nagakubo</item>
+        <item>船行 Funayuki</item>
+        <item>合庁前 Gochomae</item>
+        <item>安房港 Anbo Port</item>
+        <item>安房 Anbo</item>
+        <item>牧野 Makino</item>
+        <item>屋久杉自然感 Shizenkan (Museum)</item>
+        <item>盛久神社 Morijisa Jinja</item>
+        <item>平野 Hirano</item>
+        <item>麦生 Mugio</item>
+        <item>ボタニカルリサーチパーク Botanical Research Park</item>
+        <item>原 Hara</item>
+        <item>雄之間 Onoaida</item>
+        <item>JRホテル JR Hotel</item>
+        <item>いわさきホテル Iwasaki Hotel</item>
+        <item>小島 Koshima</item>
+        <item>平内海中温泉 Hirauchi Kaichu Onsen</item>
+        <item>湯泊 Yudomari</item>
+        <item>中間 Nakama</item>
+        <item>栗生橋 Kuriobashi</item>
+        <item>大川の滝 Oko-no-Taki</item>
+        <item>牛床公園 Ushitoko Koen</item>
+        <item>白谷雲水峡 Shiratani Unsuikyo</item>
+        <item>荒川三叉路 Arakawa Sansaro</item>
+        <item>ヤクスギランド Yakusugiland</item>
+        <item>紀元杉 Kigen Sugi</item>
+        <item>荒川登山口 Arakawa Tozanguchi</item>
+    </string-array>
+    <integer-array name="all_stops_integers">
+        <item>1</item>
+        <item>4</item>
+        <item>8</item>
+        <item>11</item>
+        <item>14</item>
+        <item>17</item>
+        <item>20</item>
+        <item>21</item>
+        <item>23</item>
+        <item>25</item>
+        <item>30</item>
+        <item>31</item>
+        <item>34</item>
+        <item>37</item>
+        <item>41</item>
+        <item>44</item>
+        <item>48</item>
+        <item>49</item>
+        <item>52</item>
+        <item>56</item>
+        <item>59</item>
+        <item>62</item>
+        <item>64</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>73</item>
+        <item>78</item>
+        <item>85</item>
+        <item>86</item>
+        <item>89</item>
+        <item>94</item>
+        <item>97</item>
+        <item>99</item>
+        <item>102</item>
+        <item>112</item>
+        <item>114</item>
+        <item>123</item>
+        <item>127</item>
+        <item>129</item>
+        <item>26</item>
+        <item>29</item>
+        <item>69</item>
+        <item>71</item>
+        <item>72</item>
+        <item>70</item>
+    </integer-array>
+   
+        
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yakushimalife.yakushimanextbus"
+    android:versionCode="3"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="yakushimalife.yakushimanextbus.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <!-- A child of the main activity -->
+    <activity
+        android:name="yakushimalife.yakushimanextbus.AboutActivity"
+        android:label="@string/app_name"
+        android:parentActivityName="yakushimalife.yakushimanextbus.MainActivity" >
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.yakushimalife.yakushimanextbus.MainActivity" />
+    </activity>
+    <activity
+        android:name="yakushimalife.yakushimanextbus.StopListActivity"
+        android:label="@string/app_name"
+        android:parentActivityName="yakushimalife.yakushimanextbus.MainActivity" >
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.yakushimalife.yakushimanextbus.MainActivity" />
+    </activity>
+    <activity
+        android:name="yakushimalife.yakushimanextbus.NumbersActivity"
+        android:label="@string/app_name"
+        android:parentActivityName="yakushimalife.yakushimanextbus.MainActivity" >
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.yakushimalife.yakushimanextbus.MainActivity" />
+    </activity>
+    <activity
+        android:name="yakushimalife.yakushimanextbus.InfoActivity"
+        android:label="@string/app_name"
+        android:parentActivityName="yakushimalife.yakushimanextbus.MainActivity" >
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.yakushimalife.yakushimanextbus.MainActivity" />
+    </activity>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,294 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tagline"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/action_numbers"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/TextHowto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/howto"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+
+           		<TextView
+               		android:id="@+id/TextHowtocontent"
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="1"
+                	android:text="@string/howtocontent" />
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtnumbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/numbers"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/txtnumberscontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numberscontent"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/vertical_indent">
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/kankoukyoukai" />
+
+            <TextView
+                android:id="@+id/textkankoukyoukainumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_weight="0"
+                android:text="@string/kankoukyoukainumber" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textkankoukyoukaicontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kankoukyoukaicontent"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/vertical_indent">
+
+            <TextView
+                android:id="@+id/textmatsubanda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/matsubanda" />
+
+            <TextView
+                android:id="@+id/textmatsubandainumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_weight="0"
+                android:text="@string/matsubandanumber" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_indent" >
+
+            <TextView
+                android:id="@+id/textanbotaxi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/anbotaxi" />
+
+            <TextView
+                android:id="@+id/textanbotaxinumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0"
+                android:text="@string/anbotaxinumber" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/vertical_indent">
+
+            <TextView
+                android:id="@+id/textkotsutaximiyanoura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.36"
+                android:text="@string/kotsutaximiyanoura" />
+
+            <TextView
+                android:id="@+id/textkotsutaximiyanouranumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0"
+                android:text="@string/kotsutaximiyanouranumber" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/vertical_indent">
+
+            <TextView
+                android:id="@+id/textkotsutaxianbo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ultradent"
+                android:layout_weight="1"
+                android:text="@string/kotsutaxianbo" />
+
+            <TextView
+                android:id="@+id/textkotsutaxianbonumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0"
+                android:text="@string/kotsutaxianbonumber" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/vertical_indent">
+
+            <TextView
+                android:id="@+id/textkotsutaxionoaida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ultradent"
+                android:layout_weight="1"
+                android:text="@string/kotsutaxionoaida" />
+
+            <TextView
+                android:id="@+id/textkotsutaxionoaidanumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0"
+                android:text="@string/kotsutaxionoaidanumber" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/vertical_indent">
+
+            <TextView
+                android:id="@+id/textkotsu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/kotsu" />
+
+            <TextView
+                android:id="@+id/textkotsuinumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0"
+                android:text="@string/kotsunumber" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textBusPasses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/buspasses"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textbuspasscontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buspasscontent"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textBusTours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/bustours"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textbustourscontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bustourscontent"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textarakawa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/arakawa"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textarakawacontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arakawacontent"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/Textmoreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/moreinfo"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/buttonkankoukyoukaipdfs"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kankoukyoukaipdfs" />
+
+        <TextView
+            android:id="@+id/Textankyoukyoukainote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kankyoukyoukainote"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+    </ScrollView>
+

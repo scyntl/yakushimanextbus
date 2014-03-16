@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:yakubus="http://schemas.android.com/apk/res-auto" >
+
+    
+    <item android:id="@+id/action_stoplist"
+          android:icon="@drawable/ic_action_stopinfo2"
+          android:title="@string/action_stoplist"
+          android:menuCategory="system" 
+          android:showAsAction="always"/>
+    
+    <item android:id="@+id/action_search"
+          android:icon="@drawable/ic_action_search"
+          android:title="@string/action_search"
+          android:menuCategory="system" 
+          android:orderInCategory="100" 
+          android:showAsAction="always"/>
+    
+    <item android:id="@+id/action_numbers"
+          android:icon="@drawable/ic_action_info"
+          android:title="@string/action_numbers"
+          android:menuCategory="system" 
+          android:orderInCategory="100" 
+          android:showAsAction="always"/>
+    
+    <item android:id="@+id/action_about"
+          android:icon="@drawable/ic_action_about"
+          android:title="@string/action_about"
+          android:menuCategory="system" 
+          android:orderInCategory="100" 
+          android:showAsAction="always"/>
+    
+
+</menu>

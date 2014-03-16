@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">YakushimaNextBus</string>
+    <string name="action_search">Search!</string>
+    <string name="action_info">Information</string>
+    <string name="action_numbers">Travel Information</string>
+    <string name="action_about">About This App</string>
+    <string name="action_stoplist">Stops and Example Fares</string>
+   
+    
+        <string-array name="info">
+        <item>Tourist Information: </item>
+    </string-array>
+
+        
+    <string name="deparr">Depart-Arrive\n</string>
+    <string name="From">Where are you leaving from?</string>
+    <string name="To">Where are you going?</string>
+    <string name="go_button">Go!</string>
+    <string name="listall_button">List all buses.</string>
+    <string name="working">Searching . . .</string>
+    <string name="change_time_button">Departs at:</string>
+    <string name="current_time">Departs at: </string>
+    <string name="Explanation">These times are for Yakushima Kotsu Buses and were last updated on March, 6, 2014. I expect them to change again in the fall. I plan to add Matsubanda buses soon, so please check for updates. For current times and travel help, please call or visit a Yakushima Tourist Information Booth.</string>
+    <string name="copyright">\nThis App created and maintained by Jenny at www.Yakushimalife.com \n It is not intended to take the place of a printed bus schedule. I cannot take responsibility for errors, but I appreciate if you can report them to me.</string>
+    <string name="tagline">Yakushima Bus Times in a Click!</string>
+    <string name="versionnumber">Version 2.0</string>
+
+    <string name="notedefault">Note that this App only shows the next bus, not nescesarily the best bus.</string>
+    <string name="notewalking">Tip: If you do not mind walking, try using Oharamachi instead of A-Coop Mae.</string>
+    <string name="noteanboport">Tip: Few buses stop at Anbo Port, but many stop at Gochomae and Anbo, which are a short walk away.</string>
+    <string name="noteokonotaki">Tip: Few buses stop at Oko-no-Taki. Many stop at Kuriobashi, which is a long walk away.</string>
+	<string name="startequalsstop">Departing Stop and Final Stop must be different.</string>
+<string name="about">It is not intended to take the place of a printed bus schedule. </string>
+
+<string name="buspasses">Bus Passes</string>
+<string name="buspasscontent">1-Day passes cost 2,000 yen.\n3-Day passes cost 3,000 yen. \n4-Day passes cost 4,000 yen. \n*Passes cannot be purchased on the bus. Buy them at a Tourist Information Booth. They can only be used for Kotsu buses, and they cannot be used for buses to/from the Arakawa Trail Head. \nPrice includes 100 yen off admission for one park or the Yakusugi Museum. Children in elementary school pay half price.</string>
+<string name="bustours">Bus Tours</string>
+<string name="bustourscontent">Half-day and full-day bus tours are operated in Japanese by Matsubanda and Yakushima Kotsu. Adult prices range from 2,000 yen and 3,500 yen for half day tours by Matsubanda, to 4,500 yen for full day tours by either Matsubanda or Yakushima Kotsu. Lunch and admission fees not included.\n\nFor more information please contact either the Tourism Association or Matsubanda or Yakushima Kotsu directly.</string>
+<string name="arakawa">Arakawa Trail Head Buses</string>
+<string name="arakawacontent">From March through November traffic to the trail head is limited to buses and taxies. One-way bus tickets cost 850 yen. Advance purchase at a Tourist Information Booth is encouraged.</string>
+
+<string name="howto">How to Ride the Bus</string>
+<string name="howtocontent">Take a ticket when you board. Push the stop button when the bus reaches your destination. Pay the fair listed for the number on your ticket. You cannot use bills larger than 1,000 yen. If you need change for smaller amounts, you can use the change machine next to the driver when the bus reaches your stop. If you want to use a bus pass, you must buy it before boarding the bus. Children in elementary school pay half price.</string>
+<string name="numbers">Useful Phone Numbers</string>
+<string name="numberscontent">(Services may not be available in English.)</string>
+<string name="stoplist">Stops and Example Fares</string>
+<string name="stoplistcontent">Bold stops included in the schedule finder. Green stops listed in the example fares below.</string>
+
+
+<string name="taxies">Taxi Companies</string>
+<string name="kankoukyoukai">Tourism Association</string>
+<string name="kankoukyoukainumber">(0997)49-4010</string>
+<string name="kankoukyoukaicontent">Tourism Association information booths are located at Miyanoura Port, Anbo, and the Airport.</string>
+
+<string name="matsubanda">Matsubanda and Matsubanda Taxi: </string>
+<string name="matsubandanumber">(0997)43-5000</string>
+<string name="anbotaxi">Anbo Taxi: </string>
+<string name="anbotaxinumber">(0997)46-2311</string>
+<string name="kotsutaximiyanoura">Kotsu Taxi (Miyanoura): </string>
+<string name="kotsutaximiyanouranumber">(0997)42-0611</string>
+<string name="kotsu">Yakushima Kotsu: </string>
+<string name="kotsunumber">(0997)42-2221</string>
+<string name="kotsutaxianbo">       (Anbo): </string>
+<string name="kotsutaxianbonumber">(0997)46-2321</string>
+<string name="kotsutaxionoaida">       (Onoaida): </string>
+<string name="kotsutaxionoaidanumber">(0997)47-2018</string>
+
+<string name="moreinfo">For more information and downloadable .pdf files, please visit the Yakushima Tourism Associaion website.</string>
+<string name="kankoukyoukaipdfs">Yakushima Tourism Association Files</string>
+<string name="kankyoukyoukainote">*While this app is based on information available for download from the Yakushima tourism Assocation, it is not affiliated with the Yakushima Tourism Association. Please address errors and inquiries to Jenny at yakushimalife@gmail.com.</string>
+<string name="yakushimalifelogo">Yakushima Life</string>
+<string name="yakushimalife">Visit YakushimaLife.com</string>
+</resources>
