@@ -519,7 +519,7 @@ public class MainActivity extends Activity {
 									//should say that you could transfer to the Matsubanda bus at any stop from Miyanoura to Makino.
 									if ((25<pointb&&pointb<30)|(pointa>98)) foundstop=0;
 									break;
-								case 101:nonsense2
+								case 101:nonsense3
 									if (pointa<20)
 										notes=getString(R.string.ToIwasaki)+getString(R.string.R7T101);
 									else
