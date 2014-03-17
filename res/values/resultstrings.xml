@@ -44,16 +44,18 @@
     	<string name="R12T13"> Transfer at any stop from Miyanoura Port (14:05) onwards. The bus for Oko-no-Taki will depart in about 75 minutes.</string>
     	<string name="R12T103"> Transfer at any stop from Miyanoura Port (14:05) to Oharamachi (14:10). The bus bound for Shiratani Unsuikyo will depart in 85~90 minutes.</string>
     	<string name="R12T99907"> Transfer at any stop from Miyanoura Port to Makino. The Matsubanda bus to the Shizenkan (Museum) will depart in 38~40 minutes. Kotsu Bus passes cannot be used.</string>
-    	<string name="B102T13"> Transfer at Oharamachi (15:05). The bus bound for Oko-no-Taki departs at 15:30 in the opposite direction.</string>
-    	<string name="B201T13"> Transfer at Anbo (15:49). The bus bound for Oko-no-Taki departs at 16:05 in the opposite direction.</string>
-    	<string name="R14T16"> Transfer at any stop from Miyanoura Port (15:45) onwards. The bus bound for Kurio-Bashi will depart in about one hour.</string>
+    	<string name="B999101T13"> Transfer at Oharamach (15:20). The bus bound for Oko-no-Taki departs at 15:30 in the opposite direction. If you are using a Kotsu Bus pass, take the bus from Shiratani that departs at 14:40 and stops at Oharamachi at 15:05. Transfer there.</string>
+    	<string name="B201T13"> Transfer at Makino (15:48). The bus bound for Oko-no-Taki departs at 16:05 in the opposite direction.</string>
+    	<string name="B99907T13"> Transfer at Makino (15:50). The bus bound for Oko-no-Taki departs at 16:05 in the opposite direction. If you are using a Kotsu Bus passe, take the bus from the Shizenkan that departs at 15:43 and stops at Makino at 15:48.</string>
+    		<string name="R14T16"> Transfer at any stop from Miyanoura Port (15:45) onwards. The bus bound for Kurio-Bashi will depart in about one hour.</string>
    	 	<string name="R14T99909"> Transfer at any stop from Miyanoura Port to Makino. The Matsubanda bus to the Shizenkan (Museum) will depart in 51~55 minutes. Kotsu Bus passes cannot be used.</string>
    	 	<string name="B103T16"> Transfer at Oharamachi (16:35). The bus bound for Kurio-Bashi departs at 16:50 in the opposite direction.</string>
     <string name="BTozan">This is the Arakawa Tozan bus. This bus line is operated from March through November and requires a separate ticket.</string>
     	<string name="B305T15"> Transfer at the Shizenkan (17:35). The bus bound for Hirauchi Kaichu Onsen departs at 17:40.</string>
     <string name="ToHirauchi"> Take the bus bound for Hirauchi Kaichu Onsen.</string>
+    	<string name="R15T18"> Transfer at any stop after leaving the Shizenkan. The bus bound for Kurio-Bashi will depart in about 66 minutes.</string>
     	<string name="R17T18"> Transfer at any stop from Miyanoura Port (17:35) onwards. The bus bound for Kurio-Bashi will depart in about 30~33 minutes.</string>
-   	 <string name="R99910T18"> Transfer at Makino (18:25). The bus bound for Kurio-Bashi departs at 18:50.</string>
+    	<string name="R99910T18"> Transfer at Makino (18:25). The bus bound for Kurio-Bashi departs at 18:50.</string>
     	<string name="B306T99910"> Transfer at the Shizenkan (18:05) The Matsubanda bus bound for Miyanoura Port departs at 18:20. Kotsu Bus passes cannot be used.</string>
     <string name="MatsubandaToAirport">Take the Matsubanda bus bound for the Airport. Kotsu Bus passes cannot be used.</string>
     
