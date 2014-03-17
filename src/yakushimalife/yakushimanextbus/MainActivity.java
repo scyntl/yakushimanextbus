@@ -47,12 +47,9 @@ public class MainActivity extends Activity {
 	private String Tip = "";
 	//This is the list of clockwise and counterclockwise bus runs. Longer numbers are two buses with a transfer.
 	//For yakushimalife, 056 is the first half of Bus Run #5 pasted to the second half of Bus Run #6.
-	private String[] RunList = { "1", "300", "1300", "99901", "99901300", "301", "99902301", "302", "303", "2", "3", "4", "5", "5999100", "5100", "6", "056", "200", "10599903", "7", "799904", "107", "8",
-			"078", "9", "304", "999905304", "10", "1099906", "210", "110", "11", "01011", "12", "1299907", "112", "13", "01213", "99908", "14", "1499909", "15",
-			"16", "01416", "17", "99910", "18", "1718", "99911", 
-			"1137", "1138", "11410", "11411", "11513", "11616", "56200",
-			"1011210", "220911", "23013", //TODO 113?
-			"3041516", "11011210" };
+	private String[] RunList = { "300", "99901", "1", "301", "99902", "302", "303", "2", "3", "4", "5", "200", "999100", "100", 
+			"6", "99903", "7", "101", "99904", "8", "9", "999905", "304", "10", "102", "99906",
+			"11", "201", "999101", "12", "99907", "13", "103", "99908", "14", "99909", "16", "15", "99910", "17", "18", "99911" };
 
 	private String[] RunList2 = { "1", "2", "99901", "3", "3000", "33000", "4", "5", "45", "99902", "6", "7", "99903",
 			"67", "8",  "799904","9", "10", "910", "11", "99905", "12", "99906", "13", "14", "1314", "99907", "15", "99908",
@@ -519,11 +516,13 @@ public class MainActivity extends Activity {
 									//should say that you could transfer to the Matsubanda bus at any stop from Miyanoura to Makino.
 									if ((25<pointb&&pointb<30)|(pointa>98)) foundstop=0;
 									break;
-								case 101:nonsense4
+								case 101:
 									if (pointa<20)
 										notes=getString(R.string.ToIwasaki)+getString(R.string.R7T101);
 									else
 										notes=getString(R.string.ToShiratani);
+									if (pointb<=20)
+										foundstop=0;
 									break;
 								case 99904:
 									notes=getString(R.string.MatsubandaToShizenkan);
@@ -533,7 +532,7 @@ public class MainActivity extends Activity {
 									notes=getString(R.string.ToKurioBashi);
 									break;
 								case 9:
-									if (67<pointa&&pointa<73)
+									if (68<=pointa&&pointa<=72)
 										notes=getString(R.string.ToGoChoMae)+getString(R.string.B200T9);
 									else
 										notes=getString(R.string.ToKurioBashi);
@@ -551,9 +550,13 @@ public class MainActivity extends Activity {
 									//run 304 --> 300
 								case 10:
 									notes=getString(R.string.ToIwasaki);
-									if (25<pointa&&pointa<30)
-										notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B101T10);
-									if (pointb>99)
+									if (25<pointa&&pointa<30){
+										notes=getString(R.string.ToMiyanouraKo);
+										if (pointb>99)
+											notes=notes+getString(R.string.B101T11);
+										else
+											notes=notes+getString(R.string.B101T10);}
+									else if (pointb>99)
 										notes=notes+getString(R.string.R10T11);
 									else if (25<pointb&&pointb<30)
 										notes=notes+getString(R.string.R10T102);
@@ -562,7 +565,7 @@ public class MainActivity extends Activity {
 										notes=notes+getString(R.string.R10T99906);
 									else if (68<pointb&&pointb<73)
 										notes=notes+getString(R.string.R10T201);
-									if ((25<pointa&&pointa<30&&25<pointb&&pointb<30) | (67<pointa&&pointa<73) | (pointa>=20&&(68<=pointb&&pointb<73)))
+									if ((25<pointa&&pointa<30)&(25<pointb&&pointb<30) | (67<pointa&&pointa<73) | (pointa>=20&&(68<=pointb&&pointb<73)))
 										foundstop=0;
 									break;
 									//run 102 --> case 100
@@ -575,11 +578,9 @@ public class MainActivity extends Activity {
 									break;
 								case 11:
 									notes=getString(R.string.ToOkonoTaki);
-									if (25<pointa&&pointa<30)
-										notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B101T11);
-									else if ((pointa<20)&(68<=pointb&&pointb<=72))
+									if (68<=pointb&&pointb<=72)//TODO add Matsubanda Shizenkan (13:15) transfer to run11.
 										notes=notes+getString(R.string.R11T201);
-									if((25<pointb&&pointb<30)|(67<pointa&&pointa<73))
+									if(67<pointa&&pointa<73)
 										foundstop=0;
 									break;
 									//run 201 --> 200
@@ -591,24 +592,28 @@ public class MainActivity extends Activity {
 									else if (25<pointb&&pointb<30)
 										notes=notes+getString(R.string.R12T103);
 									else if (pointb==68){
-										notes=notes+getString(R.string.R12T99907);
+										notes=notes+getString(R.string.R12T99907);//TODO pointa==68
 										if (pointa>19)
 											flags=12;//TODO set code for this flag.
 									}
-									if ((pointa>=99) | (pointa==68) | (26<=pointa&&pointa<=29))
+									if ((pointa>=99) | (pointa==68) | (26<=pointa&&pointa<=29) | (25<pointb&&pointb<30&&pointa>=20))
 										foundstop=0;
 									break;
 									//run 99907 -->99900
 								case 13:
 									if (25<pointa&&pointa<30)
-										notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B102T13);
-									else if (67<pointa&&pointa<73)
+										notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B999101T13);
+								//There is a Kotsu bus that leaves a few minutes earlier.
+									else if (69<=pointa&&pointa<=72)
 										notes=getString(R.string.ToGoChoMae)+getString(R.string.B201T13);
+									else if (pointa==68)
+										notes=getString(R.string.ToGoChoMae)+getString(R.string.B99907T13);
 									else
 										notes=getString(R.string.ToOkonoTaki);
 									if ((25<pointb&&pointb<30)|(67<pointb&&pointb<73))
 										foundstop=0;
 									break;
+									//run 103 --> case 100
 									//run 99908 --> 99900
 								case 14:
 									notes=getString(R.string.ToIwasaki);
@@ -636,6 +641,12 @@ public class MainActivity extends Activity {
 										notes=getString(R.string.BTozan)+getString(R.string.B305T15);
 									else
 										notes=getString(R.string.ToHirauchi);
+									if (pointb>=114){
+										if (pointa==68||pointa==70)
+											notes=notes+getString(R.string.R15T18);
+										else
+											foundstop=0;
+									}										
 									if (pointb==70)
 										foundstop=0;
 									break;
