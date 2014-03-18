@@ -8,8 +8,6 @@ import android.widget.TextView;
 import com.yakushimalife.yakushimanextbus.R;
 
 public class StopListActivity extends NextBusActivity {    
-
-
 	private TextView tvDisplayStopList;
 	private final String StopListString="<b><font color =#11aa77>1. 永田 Nagata</font></b>" +
 			"<br>&nbsp 2. 永田入口 Nagata Iriguchi" +
