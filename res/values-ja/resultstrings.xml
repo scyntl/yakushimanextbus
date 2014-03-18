@@ -57,7 +57,7 @@
     
     <string name="backrun1result">屋久杉自然館行き。3月1日から11月30日まで運行。別の乗車券の購入が必要です。それ以外の期間:</string>
     <string name="backrun2result">高速船始発が安房港の代わりに宮之浦港から出る日のみ臨時運行。通常の場合:</string>
-    <string name="backrun3result">永田行き</string>
+    <!-- string name="backrun3result">永田行き</string -->
     <string name="backrun3result">宮之浦港行き。宮之浦港（08:20）でおりて乗り換えます。永田行きの便は08:40に出発します。</string>
     <string name="backrun4result">宮之浦港行き</string>
 	<!--5-->
