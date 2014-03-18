@@ -1,7 +1,5 @@
 package yakushimalife.yakushimanextbus;
 
-import com.yakushimalife.yakushimanextbus.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,20 +11,20 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class AboutActivity extends Activity {
-	
-	private Button buttonyakushimalife;
+import com.yakushimalife.yakushimanextbus.R;
 
+public class AboutActivity extends Activity {
+	public static final String YAKUSHIMA_LIFE_URL = "http://www.yakushimalife.com";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about);
-		buttonyakushimalife = (Button) findViewById(R.id.buttonyakushimalife);
-		buttonyakushimalife.setOnClickListener(new OnClickListener() {
+		Button buttonYakushimaLife = (Button) findViewById(R.id.buttonyakushimalife);
+		buttonYakushimaLife.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri
-						.parse("http://www.yakushimalife.com")));
+						.parse(YAKUSHIMA_LIFE_URL)));
 			}
 		});
 
