@@ -9,17 +9,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.yakushimalife.yakushimanextbus.R;
-
-import android.app.Activity;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -28,7 +21,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class MainActivity extends Activity {
+import com.yakushimalife.yakushimanextbus.R;
+
+public class MainActivity extends NextBusActivity {
 
 	private TextView tvDisplayBus;
 	private TextView tvTip;
@@ -47,11 +42,11 @@ public class MainActivity extends Activity {
 	private String Tip = "";
 	//This is the list of clockwise and counterclockwise bus runs. Longer numbers are two buses with a transfer.
 	//For yakushimalife, 056 is the first half of Bus Run #5 pasted to the second half of Bus Run #6.
-	private String[] RunList = { "300", "99901", "1", "301", "99902", "302", "303", "2", "3", "4", "5", "200", "999100", "100", 
+	private final String[] RunList = { "300", "99901", "1", "301", "99902", "302", "303", "2", "3", "4", "5", "200", "999100", "100", 
 			"6", "99903", "7", "101", "99904", "8", "9", "999905", "304", "10", "102", "99906",
 			"11", "201", "999101", "12", "99907", "13", "103", "99908", "14", "99909", "16", "15", "99910", "17", "18", "99911" };
 
-	private String[] RunList2 = { "1", "2", "99901", "3", "3000", "33000", "4", "5", "45", "99902", "6", "7", "99903",
+	private final String[] RunList2 = { "1", "2", "99901", "3", "3000", "33000", "4", "5", "45", "99902", "6", "7", "99903",
 			"67", "8",  "799904","9", "10", "910", "11", "99905", "12", "99906", "13", "14", "1314", "99907", "15", "99908",
 			"16", "302301516", "1516", "17", "99909", "99910", "18", "300", "301", "302", "303", "304", "305", "30517",
 			"306", "307", "300220910",
@@ -79,15 +74,6 @@ public class MainActivity extends Activity {
 		endpointspinner.setAdapter(adapter);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu items for use in the action bar
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main, menu);
-		return super.onCreateOptionsMenu(menu);
-
-	}
-
 	// display current time
 	public void setCurrentTimeOnView() {
 		tvDisplayTime = (TextView) findViewById(R.id.tvTime);
@@ -99,32 +85,6 @@ public class MainActivity extends Activity {
 				.append(pad(minute)));
 
 	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle presses on the action bar items
-		switch (item.getItemId()) {
-		case R.id.action_search:
-			Intent mainintent = new Intent(this, MainActivity.class);
-			startActivity(mainintent);
-			return true;
-		case R.id.action_stoplist:
-			Intent stoplistintent = new Intent(this, StopListActivity.class);
-			startActivity(stoplistintent);
-			return true;
-		case R.id.action_numbers:
-			Intent numbersintent = new Intent(this, NumbersActivity.class);
-			startActivity(numbersintent);
-			return true;
-		case R.id.action_about:
-			Intent aboutintent = new Intent(this, AboutActivity.class);
-			startActivity(aboutintent);
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
-
 
 	public void addListenerOnButton() {
 
@@ -313,7 +273,8 @@ public class MainActivity extends Activity {
 		return null;
 	}
 
-	private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+	private final TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+		@Override
 		public void onTimeSet(TimePicker view, int selectedHour,
 				int selectedMinute) {
 			hour = selectedHour;
@@ -350,7 +311,7 @@ public class MainActivity extends Activity {
 	}
 
 	public class checkrun {
-		private String subAnswerString;
+		private final String subAnswerString;
 		private int flags;
 		public checkrun(String runnumber, int pointa, int pointb,
 				int starthour, int startminute, String anasset) {

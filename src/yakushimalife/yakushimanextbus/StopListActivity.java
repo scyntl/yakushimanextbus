@@ -1,22 +1,17 @@
 package yakushimalife.yakushimanextbus;
 
 
-import com.yakushimalife.yakushimanextbus.R;
-
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.TextView;
 
-public class StopListActivity extends Activity {    
+import com.yakushimalife.yakushimanextbus.R;
+
+public class StopListActivity extends NextBusActivity {    
 
 
 	private TextView tvDisplayStopList;
-	private String StopListString="<b><font color =#11aa77>1. 永田 Nagata</font></b>" +
+	private final String StopListString="<b><font color =#11aa77>1. 永田 Nagata</font></b>" +
 			"<br>&nbsp 2. 永田入口 Nagata Iriguchi" +
 			"<br>&nbsp 3. エビス町 Ebisumachi" +
 			"<br><b>4. 田舎浜 Inakahama</b>" +
@@ -236,37 +231,6 @@ public class StopListActivity extends Activity {
 		tvDisplayStopList.setText(Html.fromHtml(StopListString));
 		
 //		tvDisplayStopList.setText(Html.fromHtml(getResources().getString(R.string.stoplistcontent)));
-
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu items for use in the action bar
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main, menu);
-		return super.onCreateOptionsMenu(menu);
-
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle presses on the action bar items
-		switch (item.getItemId()) {
-		case R.id.action_search:
-			Intent mainintent = new Intent(this, MainActivity.class);
-			startActivity(mainintent);	
-			return true;
-		case R.id.action_numbers:
-			Intent numbersintent = new Intent(this, NumbersActivity.class);
-			startActivity(numbersintent);
-			return true;
-		case R.id.action_about:
-			Intent aboutintent = new Intent(this, AboutActivity.class);
-			startActivity(aboutintent);
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
 	}
 }
 
