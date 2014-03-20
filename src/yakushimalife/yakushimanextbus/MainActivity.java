@@ -51,12 +51,10 @@ public class MainActivity extends Activity {
 			"6", "99903", "7", "101", "99904", "8", "9", "999905", "304", "10", "102", "99906",
 			"11", "201", "999101", "12", "99907", "13", "103", "99908", "14", "99909", "16", "15", "99910", "17", "18", "99911" };
 
-	private String[] RunList2 = { "1", "2", "99901", "3", "3000", "33000", "4", "5", "45", "99902", "6", "7", "99903",
-			"67", "8",  "799904","9", "10", "910", "11", "99905", "12", "99906", "13", "14", "1314", "99907", "15", "99908",
-			"16", "302301516", "1516", "17", "99909", "99910", "18", "300", "301", "302", "303", "304", "305", "30517",
-			"306", "307", "300220910",
-			"3206", "11211", "1135", "11410", "11514", "11616",
-			"3105", "6107", "9110", "13112" };
+	private String[] RunList2 = { "1", "2", "99901", "3", "100", "300", "999100", "4", "5", "6", "99902", "7", "8", "99903",
+			"200", "9",  "99904","10", "11", "12", "99905", "101", "13", "99906", "301", "14", "15", "999101", "102",
+			"201", "99907", "302", "16", "99908", "303", "17", "18", "304", "99909", "99910", "305", "19",
+			"306", "307" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -439,7 +437,10 @@ public class MainActivity extends Activity {
 									flags=99902;//TODO 
 									break;
 									//run 302 ->300
-									//run 303 ->300
+								case 303: 
+									notes=getString(R.string.Tozan303);
+									flags=303;
+									break;
 								case 2: 
 									notes=getString(R.string.R2);
 									flags=2;
@@ -603,7 +604,7 @@ public class MainActivity extends Activity {
 								case 13:
 									if (25<pointa&&pointa<30)
 										notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B999101T13);
-								//There is a Kotsu bus that leaves a few minutes earlier.
+									//There is a Kotsu bus that leaves a few minutes earlier.
 									else if (69<=pointa&&pointa<=72)
 										notes=getString(R.string.ToGoChoMae)+getString(R.string.B201T13);
 									else if (pointa==68)
@@ -677,158 +678,259 @@ public class MainActivity extends Activity {
 							{
 								switch (run) {
 								//Counterclockwise ("back") runs
-								case -1: notes=getString(R.string.backrun1result);break;
-								case -2: notes=getString(R.string.backrun2result);break;
-								case -99901: notes=getString(R.string.backrun999result);
-								if ((pointb==26)|(pointb==29)) 
-								{notes= notes + getString(R.string.backrun99901999101result);
-								}
-								if ((pointa==26)|(pointa==29)) foundstop=0;break;
-								case -3: notes=getString(R.string.backrun3result);break;
-								case -33000: notes=getString(R.string.backrun33000result);break;
-								case -4: notes=getString(R.string.backrun4result);break;
-								case -45: notes=getString(R.string.backrun45result);
-								if ((pointb>19)|(pointa<20)) foundstop=0;
-								flags=20;break;//This is the only bus that you might choose over the next one!
-								case -99902: notes=getString(R.string.backrun999result);
-								if (pointb<20) notes =notes+ getString(R.string.backrun99902cresult);
-								if (pointa<21) foundstop=0; break;
-								case -67: notes=getString(R.string.backrun67result);
-								if ((pointb>19)|(pointa<35)|(pointa==68)) foundstop=0;
-								if (pointb==68) notes=getString(R.string.backrun6799903result);break;
-								case -99903: notes=getString(R.string.backrun999result); break;
-								case -99904: notes=getString(R.string.backrun999result); 
-								if (pointb<20) 
-								{if (pointa==68) notes =notes+ getString(R.string.backrun99904cresult);
-								else foundstop=0;//TODO add the option to transfer twice.
-								}
-								if (pointa<21) foundstop=0; break;
-								case -910: notes=getString(R.string.backrun910result);
-								if ((pointb>19)|(pointa<20)|(pointa==68)) foundstop=0;
-								if (pointb==68) notes=getString(R.string.backrun91099905result);break;
-								case -11: notes=getString(R.string.backrun3result);
-								if (pointa==68) foundstop=0;
-								if (pointb==68) notes=getString(R.string.backrun1199906result);break;
-								case -99905: notes=getString(R.string.backrun999result); 
-								if ((pointb==26)|(pointb==29)) {
-									notes=getString(R.string.backrun99905999101result);
-									if (pointa>19) foundstop=0;
-								}
-								if ((pointa==26)|(pointa==29)) foundstop=0;break;
-								case -99906: notes=getString(R.string.backrun999result);
-								if (pointb<20) notes =notes+ getString(R.string.backrun99906cresult);
-								if (pointa<21) foundstop=0; break;
-								case -14: notes=getString(R.string.backrun3result);
-								if (pointa==68) foundstop=0;
-								if (pointb==68) notes=getString(R.string.backrun1499907result);break;
-								case -1314: notes=getString(R.string.backrun1314result);
-								if ((pointb>19)|(pointa<100)) foundstop=0;break;
-								case -99907: notes=getString(R.string.backrun999result); break;
-								case -15: notes=getString(R.string.backrun4result);
-								if (pointa==68) foundstop=0;
-								if (pointb==68) notes=getString(R.string.backrun1599909result);break;
-								case -99908: notes=getString(R.string.backrun999result); break;
-								case -16: notes=getString(R.string.backrun3result);
-								if (pointa==68) foundstop=0;
-								if (pointb==68) notes=getString(R.string.backrun1699910result);break;
-								case -1516: notes=getString(R.string.backrun1516result);
-								if ((pointb>19)|(pointa<100)) foundstop=0;break;
-								case -17: notes=getString(R.string.backrun17result);break;
-								case -99909: notes=getString(R.string.backrun999result); break;
-								case -99910: notes=getString(R.string.backrun999result); break;
-								case -300: notes=getString(R.string.backrun300result);break;
-								case -30517:
+								case -1: 
+									notes=getString(R.string.ToShizenkan);
+									if (pointb==70)
+										notes=notes+getString(R.string.B1T303);
+									else if (pointa==70)
+										foundstop=0;
+									break;
+								case -2:
+									notes=getString(R.string.ToMiyanouraKo);
+									flags=-2;
+									break;
+								case -99901:
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									if (26<=pointb&&pointb<=29)
+										notes=notes+getString(R.string.B99901T999100);
+									break;	
+								case -3:
+									notes=getString(R.string.ToKurioBashi);
 									if (pointb<20)
-										notes=getString(R.string.backrun30517bresult);
-									else
-										notes=getString(R.string.backrun30517result);
-									if ((pointb>67)|(pointa<69)) foundstop=0;break;
-								case -300220910: 
-									if (pointa==70)
-									{
-										notes=getString(R.string.backrun300result)+getString(R.string.backrun300220result);
-										if (pointb<62)
-										{
-											notes=notes+getString(R.string.backrun2209result);
-											if (pointb<20)
-												notes=notes+getString(R.string.backrun220910result);
-										}
-									}
-									else if (pointa>62)
-									{
-										notes=getString(R.string.backrun220result);
-										if (pointb<62)
-										{
-											notes=notes+getString(R.string.backrun2209result);
-											if (pointb<20)
-												notes=notes+getString(R.string.backrun220910result);
-										}
-									}
-									else
-										foundstop=0;break;
-								case -302301516: //TODO add stop 70 to matsubanda backruns
-									if (pointa==70)
-									{
-										notes=getString(R.string.backrun300result)+getString(R.string.backrun302230result);
-										if (pointb<20)
-											notes=notes+getString(R.string.backrun23016result);
-										else if (pointb<62)
-											notes=notes+getString(R.string.backrun23015result);
-									}
-									else if (pointa>62)
-									{
-										notes=getString(R.string.backrun220result);
-										if (pointb<20)
-											notes=notes+getString(R.string.backrun23016result);
-										else if (pointb<62)
-											notes=notes+getString(R.string.backrun23015result);
-									}
-									else
-										foundstop=0;break;
-								case -3206: notes=getString(R.string.backrun3206result);
-								if ((pointb>72)|(pointb<68)|(pointa>62&&(pointa<73)))  foundstop=0; break;
-								case -11211: notes=getString(R.string.backrun11211result);
-								if (pointa>99)
-									notes=getString(R.string.backrun11211bresult);
-								if ((pointb>72)|(pointb<68)|(pointa>62&&(pointa<73)))   foundstop=0; break;
-								case -1135: 
-									if (pointb<20)
-										notes=getString(R.string.backrun1135bresult);
-									else
-										notes=getString(R.string.backrun1135result);break;
-								case -11410: 
-									if (pointb<20)
-										notes=getString(R.string.backrun11410bresult);
-									else
-										notes=getString(R.string.backrun11410result);break;
-								case -11514: 
-									if (pointb<20)
-										notes=getString(R.string.backrun11514bresult);
-									else
-										notes=getString(R.string.backrun11514result);break;
-								case -11616: 
-									if (pointb<20)
-										notes=getString(R.string.backrun11616bresult);
-									else
-										notes=getString(R.string.backrun11616result);break;
-								case -3105: notes=getString(R.string.backrun3105result);
-								if ((pointb>29)|(pointa<30)) foundstop=0; break;
-								case -6107: notes=getString(R.string.backrun6107result);
-								if ((pointb>29)|(pointa<30)) foundstop=0; break;
-								case -9110: 
-									if (pointa>99)
-										notes=getString(R.string.backrun9110bresult);
-									else
-										notes=getString(R.string.backrun9110result);
-									if ((pointb>29)|(pointa<30))  foundstop=0; break;
-								case -13112: notes=getString(R.string.backrun13112result);
-								if ((pointb>29)|(pointa<30))  foundstop=0; break;
-								case -999100:  notes=getString(R.string.backrun999result); break;
-								case -99910114:  notes=getString(R.string.backrun999result); 
-								if (pointb<21) notes=notes+getString(R.string.backrun99910114result);
-								if (pointa<21)foundstop=0;break;	
+										notes=notes+getString(R.string.B3TB4);
+									if (26<=pointb&&pointb<=29)
+										notes=notes+getString(R.string.B3T100);
+									if ((pointa<=20)|(26<=pointa&&pointa<=29))
+										foundstop=0;
+									break;	
+								case -100:
+									notes=getString(R.string.ToMiyanouraKo);
+									break;
+								case -300:
+									notes=getString(R.string.Tozan);
+									break;
+								case -999100:
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+								case -4:
+									notes=getString(R.string.ToNagata);
+									break;
 
+								case -5:
+									notes=getString(R.string.ToMiyanouraKo);
+									if (pointb<20)
+										notes=notes+getString(R.string.B5TB6);
+									else if (68<=pointb&&pointb<=72)
+										notes=notes+getString(R.string.B5T200);//TODO Did you include Yland on transfers to 200/B200 201/B201?
+									if ((pointa<=20)|(68<=pointa&&pointa<=72))
+										foundstop=0;
+									break;
+								case -6:
+									if (26<=pointa&&pointa<=29)
+										notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B100TB6);
+									else
+										notes=getString(R.string.ToNagata);
+									if (26<=pointb&&pointb<=29)
+										foundstop=0;
+									break;
+								case -99902:
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+								case -7:
+									notes=getString(R.string.ToMiyanouraKo);
+									if (pointb<20)
+										notes=notes+getString(R.string.B7TB8);
+									else if (26<=pointb&&pointb<=29)
+										notes=notes+getString(R.string.B7T101);
+									if ((pointa<=37)|(26<=pointa&&pointa<=29))
+										foundstop=0;
+									break;
+								case -8:
+									notes=getString(R.string.ToNagata);//SHIRATANI
+									break;
+								case -99903:
+									if (pointa==70)
+										notes=getString(R.string.Tozan)+getString(R.string.B300TB99903);
+									else
+										notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+								case -200:
+									notes=getString(R.string.ToGoChoMae);
+									break;
+								case -9:
+									notes=getString(R.string.ToMiyanouraKo);
+									break;
+								case -99904:
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+								case -10:
+									notes=getString(R.string.ToMiyanouraKo);
+									if (pointa==129){
+										if (69<=pointb&&pointb<=72)
+											if (pointb==70)
+												notes=notes+getString(R.string.B10T304);
+											else
+												notes=notes+getString(R.string.B10T201);//TODO Fix values for pointa an pointb.
+										else if (pointb==68)
+											notes=notes+getString(R.string.B10T99905);
+										else if (26<=pointb&&pointb<=29)
+											notes=notes+getString(R.string.B10T102);
+									}
+									else if (pointa<=68&&pointa<=72)
+										notes=getString(R.string.ToGoChoMae)+getString(R.string.B200T10);										
+									if (pointb<20)
+										notes=notes+getString(R.string.B10TB11);
+									if (((69<=pointb&&pointb<=72)|(pointb==68)|(26<=pointb&&pointb<=29))&(pointa!=129) | (pointa<20) | (26<=pointa&&pointa<=29))
+										foundstop=0;									
+									break;
+								case -11:
+									notes=getString(R.string.ToNagata);
+									if (pointa>20)
+										notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B101T11);
+									if (pointb>=20)
+										foundstop=0;
+									break;
+								case -12:
+									notes=getString(R.string.ToNagata);
+									if (pointb==72)
+										notes=notes+getString(R.string.B12T99906);
+									else if (69<=pointb&&pointb<=72)
+										notes=notes+getString(R.string.B12T201);
+									else if (26<=pointb&&pointb<=29)
+										notes=notes+getString(R.string.B12T102);
+									if ((68<=pointa&&pointa<=72)|(26<=pointa&&pointa<=29))
+										foundstop=0;
+									break;
+								case -99905:
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+									//run -101 --> 100
+								case -13:
+									notes=getString(R.string.ToMiyanouraKo);
+									break;
+								case -99906:
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+									//run -304 --> 300
+								case -14:
+									notes=getString(R.string.ToMiyanouraKo);
+									if (pointb<20)
+										notes=notes+getString(R.string.B14TB15);
+									else if (26<=pointb&&pointb<=29){
+										if (pointa>99)
+											notes=notes+getString(R.string.B14T103);
+										else
+											foundstop=0;
+									}
+									if ((26<=pointb&&pointb<=29)|(pointa<=20))
+										foundstop=0;
+									break;
+								case -15:
+									if (26<=pointa&&pointa<=29)
+										notes=getString(R.string.B103TB15);
+									else
+										notes=getString(R.string.ToNagata);
+									if (26<=pointb&&pointb<=29)//TODO set the values for pointb different to pointa.
+										notes=notes+getString(R.string.B15T103);
+									break;
+								case -999101:
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+									//run -102 -->-100
+								case -201:
+									notes=getString(R.string.ToGoChoMae);
+									break;
+								case -99907:
+								if (pointa==70){
+									if (pointb<20)
+										notes=getString(R.string.Tozan)+getString(R.string.B302TB99907)+getString(R.string.B99907TB18);
+									else if (pointb<62)
+										notes =getString(R.string.Tozan)+getString(R.string.B302TB99907b);
+									else 
+										notes=getString(R.string.Tozan)+getString(R.string.B302TB201);
 								}
+								else if (68<pointa&&pointa<=72){
+									notes=getString(R.string.ToGoChoMae);//comment for Kotsu
+									if (pointb<20)
+										notes=notes+getString(R.string.B201TB18);
+									else if (pointb<62)
+										notes=notes+getString(R.string.B201TB99907);
+									else
+										foundstop=0;
+								}									
+								else
+									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									if (pointb<20){
+										if (pointa<68)
+											foundstop=0;
+										else
+										notes=notes+getString(R.string.B99907TB18);
+									}
+								if ((pointa<20)|(68<pointb&&pointb<=72)|(62<pointb&&pointa!=70))
+									foundstop=0;
+								break;
+								// run -302 --> 300
+								case -16:
+									notes=getString(R.string.ToMiyanouraKo);
+									if (pointb<20){
+										if (pointa<=99)
+											foundstop=0;
+										else
+											notes=notes+getString(R.string.B16TB18)+getString(R.string.SeasonalWait);
+									}
+									if (pointa<=20)
+										foundstop=0;
+									break;
+								case -99908:
+									if (pointa==70)
+										notes=getString(R.string.Tozan)+getString(R.string.B303TB99908);
+									else
+										notes=getString(R.string.MatsubandaToMiyanouraKo);
+									if (pointb==70)
+										foundstop=0;
+									break;
+								//run -303 --> 300
+								case -17:
+									if (pointa==70)
+										notes=getString(R.string.Tozan)+getString(R.string.B304TB17);//TODO Add note for nonseasonal B303TB99908TB18
+									else
+										notes=getString(R.string.ToSeaSide);
+									if (pointb<19)
+										notes=notes+getString(R.string.B17TB18);
+									if (pointb==70||pointa<=20)
+										foundstop=0;
+									break;
+								case -18:
+									if (26<=pointa&&pointa<=29)
+										notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B103TB18);
+									else
+										notes=getString(R.string.ToNagata);
+									if (26<=pointb&&pointb<=29)
+										foundstop=0;
+									break;
+								//run -304 -->300
+								case -99909:
+									if (pointa==70)
+										notes=getString(R.string.Tozan)+getString(R.string.B305TB99909);
+									else
+										notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+								case -99910:
+									if (pointa==70)
+										notes=getString(R.string.Tozan)+getString(R.string.B306TB99910);
+									else
+										notes=getString(R.string.MatsubandaToMiyanouraKo);
+									break;
+								//run -305 --> 300
+								case -19:
+									notes=getString(R.string.ToMiyanouraKo);
+									break;
+									// run -306 --> 300
+									// run -307 --> 300								
+								}	
+
+
+								//TODO ADD RUNS BTN ARAKAWA AND KIGEN SUGI AN SHIRATANI.
 								break;
 							}
 						}

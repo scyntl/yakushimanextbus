@@ -169,7 +169,7 @@ public class MainActivityStripped extends Activity {
 					
 					String json = null;
 					try {
-						InputStream is = getAssets().open("runs.json");
+						InputStream is = getAssets().open("backruns.json");
 						int size = is.available();
 						byte[] buffer = new byte[size];
 						is.read(buffer);
@@ -227,7 +227,7 @@ public class MainActivityStripped extends Activity {
 					
 					String json = null;
 					try {
-						InputStream is = getAssets().open("runs.json");
+						InputStream is = getAssets().open("backruns.json");
 						int size = is.available();
 						byte[] buffer = new byte[size];
 						is.read(buffer);

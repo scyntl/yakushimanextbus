@@ -360,8 +360,8 @@
 },
 "run303":
 {"notes":"This is the Arakawa Tozan bus. This bus only operates through November.",
-	"run":300,
-	"flags":30,
+	"run":303,
+	"flags":303,
 	"stops":
 	[
 		{
