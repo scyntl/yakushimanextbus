@@ -198,7 +198,7 @@
 "run301":
 {"notes":"This is the Arakawa Tozan bus. This bus only operates through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -338,7 +338,7 @@
 "run302":
 {"notes":"This is the Arakawa Tozan bus. This bus only operates through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -361,7 +361,7 @@
 "run303":
 {"notes":"This is the Arakawa Tozan bus. This bus only operates through November.",
 	"run":303,
-	"flags":303,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -1468,7 +1468,7 @@
 },
 "run101":
 {"notes":"The bus to Shiratani leaves from Miyanoura Port. You can transfer to this bus at any stop from Miyanoura Port (10:00) to Oharamachi.",
-	"run":101,
+	"run":100,
 	"flags":0,
 	"stops":
 	[
@@ -2142,7 +2142,7 @@
 "run304":
 {"notes":"This is the Arakawa Tozan bus. This bus only operates through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -2402,7 +2402,7 @@
 },
 "run102":
 {"notes":"The bus to Shiratani leaves from Miyanoura Port. You can transfer to this bus at any stop from Miyanoura Port (12:15) to Oharamachi.",
-	"run":102,
+	"run":100,
 	"flags":0,
 	"stops":
 	[
@@ -2828,8 +2828,8 @@
 },
 "run999101":
 {"notes":"The bus to Shiratani leaves from Miyanoura Port. You can transfer to this bus at any stop from Miyanoura Port (12:15) to Oharamachi.",
-	"run":999101,
-	"flags":0,
+	"run":999100,
+	"flags":99,
 	"stops":
 	[
 		{
@@ -3403,8 +3403,8 @@
 	]
 },
 "run103":
-{"notes":"The bus to Shiratani leaves from Miyanoura Port. You can transfer to this bus at any stop from Miyanoura Port (14:05) to Oharamachi.",
-	"run":103,
+{"notes":"Thebus to Shiratani leaves from Miyanoura Port. You can transfer to this bus at any stop from Miyanoura Port (14:05) to Oharamachi.",
+	"run":100,
 	"flags":0,
 	"stops":
 	[

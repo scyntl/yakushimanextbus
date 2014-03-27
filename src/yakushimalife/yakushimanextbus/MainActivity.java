@@ -174,8 +174,8 @@ public class MainActivity extends Activity {
 							if (ok !=-1)
 								AnswerString = AnswerString
 								+ anewrunner.subAnswerString;
-							//Stop if you find a regular (or seasonal) bus.
-							if ((ok == 0)|(ok==30)) 
+							//Stop if you find a regular  bus.
+							if (ok == 0) 
 								break;
 						}
 					} else {
@@ -421,20 +421,21 @@ public class MainActivity extends Activity {
 								case 99901:
 									notes=getString(R.string.MatsubandaToShizenkan);
 									if (pointb==70) notes=notes+getString(R.string.R99901T300);
-									flags=99901;//TODO 
 									break;
 								case 1:
 									notes=getString(R.string.ToShizenkan);
 									if (pointb==70) 
 										notes=notes+getString(R.string.R1T300);
 									else 
-										flags=20;//TODO
+										flags=20;
 									break;
 									//run 301 ->300
 								case 99902:
 									notes=getString(R.string.MatsubandaToShizenkan);
-									if (pointb==70) notes=notes+getString(R.string.R99902T301);
-									flags=99902;//TODO 
+									if (pointb==70) {
+										notes=notes+getString(R.string.R99902T301);
+										flags=0;
+									}
 									break;
 									//run 302 ->300
 								case 303: 
@@ -459,8 +460,12 @@ public class MainActivity extends Activity {
 										notes=notes+getString(R.string.R5T6);
 									else if (68<=pointb&&pointb<=72) 
 										notes=notes+getString(R.string.R5T200);
-									else if (26<=pointb&&pointb<=29) 
-										notes=notes+getString(R.string.R5T999100100);
+									else if (26<=pointb&&pointb<=29) {
+										if (pointa<20)
+											notes=notes+getString(R.string.R5T999100100);
+										else 
+											foundstop=0;
+									}
 									if ((pointa>=127)|(68<=pointa&&pointa<=72)|(26<=pointa&&pointa<=29)| ((pointa>=20)&(68<=pointb&&pointb<=72)) | (pointa>=20&&pointb>127)) 
 										foundstop=0; 
 									break;
@@ -510,11 +515,12 @@ public class MainActivity extends Activity {
 									else if (pointb==68)  {
 										if (pointa>=20)
 											foundstop=0;
-										else	
+										else{
 											notes=notes+getString(R.string.R7T99904);
+											hourhand="10";
+											minutehand="53";											
+										}
 									}
-									//TODO change finish time for pointb.
-									//should say that you could transfer to the Matsubanda bus at any stop from Miyanoura to Makino.
 									if ((25<pointb&&pointb<30)|(pointa>98)) foundstop=0;
 									break;
 								case 101:
@@ -559,12 +565,32 @@ public class MainActivity extends Activity {
 											notes=notes+getString(R.string.B101T10);}
 									else if (pointb>99)
 										notes=notes+getString(R.string.R10T11);
-									else if (25<pointb&&pointb<30)
-										notes=notes+getString(R.string.R10T102);
-									//TODO change finish times for pointb.
-									else if (pointb==68&&pointa<20)
-										notes=notes+getString(R.string.R10T99906);
-									else if (68<pointb&&pointb<73)
+									switch (pointb){
+									case 26:
+										if (pointa<20){
+											notes=notes+getString(R.string.R10T102);
+											hourhand="14";
+											minutehand="02";}
+										else 
+											foundstop=0;
+										break;
+									case 29:
+										if (pointa<20){
+											notes=notes+getString(R.string.R10T102);
+											hourhand="14";
+											minutehand="25";}
+										else 
+											foundstop=0;
+										break;
+									case 68:
+										if (pointa<20){
+											notes=notes+getString(R.string.R10T99906);
+											hourhand="13";
+											minutehand="33";
+										}
+										break;
+									}
+									if (68<pointb&&pointb<73)
 										notes=notes+getString(R.string.R10T201);
 									if ((25<pointa&&pointa<30)&(25<pointb&&pointb<30) | (67<pointa&&pointa<73) | (pointa>=20&&(68<=pointb&&pointb<73)))
 										foundstop=0;
@@ -579,25 +605,52 @@ public class MainActivity extends Activity {
 									break;
 								case 11:
 									notes=getString(R.string.ToOkonoTaki);
-									if (68<=pointb&&pointb<=72)//TODO add Matsubanda Shizenkan (13:15) transfer to run11.
+									if (68<=pointb&&pointb<=72)
 										notes=notes+getString(R.string.R11T201);
-									if(67<pointa&&pointa<73)
+									switch (pointb){
+									case 68:
+										notes=notes+getString(R.string.R11T201);
+										hourhand="13";
+										minutehand="39";
+									case 69:
+										notes=notes+getString(R.string.R11T201);
+									case 71:
+										notes=notes+getString(R.string.R11T201);
+									case 72:
+										notes=notes+getString(R.string.R11T201);
+									}
+									if(69<pointa&&pointa<73)
 										foundstop=0;
+									if (pointa==68){
+										if (pointb>=73)
+											notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B99905T11);
+										else foundstop=0;
+									}
+
 									break;
 									//run 201 --> 200
 									//run 999101 --> 999100
 								case 12:
-									notes=getString(R.string.ToIwasaki);
+									if (pointa==68){
+										if (pointb>68)
+											notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B99905T12);
+										else
+											foundstop=0;
+									}
+									else
+										notes=getString(R.string.ToIwasaki);
 									if (pointb>99)
 										notes=notes+getString(R.string.R12T13);
 									else if (25<pointb&&pointb<30)
 										notes=notes+getString(R.string.R12T103);
 									else if (pointb==68){
-										notes=notes+getString(R.string.R12T99907);//TODO pointa==68
+										notes=notes+getString(R.string.R12T99907);
+										hourhand="15";
+										minutehand="33";
 										if (pointa>19)
 											flags=12;//TODO set code for this flag.
 									}
-									if ((pointa>=99) | (pointa==68) | (26<=pointa&&pointa<=29) | (25<pointb&&pointb<30&&pointa>=20))
+									if ((pointa>=99) | (26<=pointa&&pointa<=29) | (25<pointb&&pointb<30&&pointa>=20))
 										foundstop=0;
 									break;
 									//run 99907 -->99900
@@ -695,7 +748,7 @@ public class MainActivity extends Activity {
 										notes=notes+getString(R.string.B99901T999100);
 									break;	
 								case -3:
-									notes=getString(R.string.ToKurioBashi);
+									notes=getString(R.string.ToMiyanouraKo);
 									if (pointb<20)
 										notes=notes+getString(R.string.B3TB4);
 									if (26<=pointb&&pointb<=29)
@@ -766,13 +819,32 @@ public class MainActivity extends Activity {
 								case -10:
 									notes=getString(R.string.ToMiyanouraKo);
 									if (pointa==129){
-										if (69<=pointb&&pointb<=72)
-											if (pointb==70)
+										if (68<=pointb&&pointb<=72)
+											switch (pointb) {
+											case 72:
+												notes=notes+getString(R.string.B10T201);
+												hourhand="14";
+												minutehand="32";
+												break;
+											case 71:
+												notes=notes+getString(R.string.B10T201);
+												hourhand="14";
+												minutehand="12";
+												break;
+											case 70:
 												notes=notes+getString(R.string.B10T304);
-											else
-												notes=notes+getString(R.string.B10T201);//TODO Fix values for pointa an pointb.
-										else if (pointb==68)
-											notes=notes+getString(R.string.B10T99905);
+												hourhand="13";
+												minutehand="35";
+												break;
+											case 69:
+												notes=notes+getString(R.string.B10T201);
+												hourhand="14";
+												minutehand="06";
+												break;
+											case 68:
+												notes=notes+getString(R.string.B10T99905);
+												break;
+											}
 										else if (26<=pointb&&pointb<=29)
 											notes=notes+getString(R.string.B10T102);
 									}
@@ -792,7 +864,7 @@ public class MainActivity extends Activity {
 									break;
 								case -12:
 									notes=getString(R.string.ToNagata);
-									if (pointb==72)
+									if (pointb==68)
 										notes=notes+getString(R.string.B12T99906);
 									else if (69<=pointb&&pointb<=72)
 										notes=notes+getString(R.string.B12T201);
@@ -830,8 +902,21 @@ public class MainActivity extends Activity {
 										notes=getString(R.string.B103TB15);
 									else
 										notes=getString(R.string.ToNagata);
-									if (26<=pointb&&pointb<=29)//TODO set the values for pointb different to pointa.
+									switch (pointb){
+									case 26:
 										notes=notes+getString(R.string.B15T103);
+										hourhand="15";
+										minutehand="42";
+										break;
+									case 29:
+										notes=notes+getString(R.string.B15T103);
+										hourhand="16";
+										minutehand="05";
+										break;
+									case 68:
+										notes=notes+getString(R.string.B15T99909);
+										break;
+									}
 									break;
 								case -999101:
 									notes=getString(R.string.MatsubandaToMiyanouraKo);
@@ -841,42 +926,48 @@ public class MainActivity extends Activity {
 									notes=getString(R.string.ToGoChoMae);
 									break;
 								case -99907:
-								if (pointa==70){
-									if (pointb<20)
-										notes=getString(R.string.Tozan)+getString(R.string.B302TB99907)+getString(R.string.B99907TB18);
-									else if (pointb<62)
-										notes =getString(R.string.Tozan)+getString(R.string.B302TB99907b);
-									else 
-										notes=getString(R.string.Tozan)+getString(R.string.B302TB201);
-								}
-								else if (68<pointa&&pointa<=72){
-									notes=getString(R.string.ToGoChoMae);//comment for Kotsu
-									if (pointb<20)
-										notes=notes+getString(R.string.B201TB18);
-									else if (pointb<62)
-										notes=notes+getString(R.string.B201TB99907);
+									if (pointa==70){
+										if (pointb<20)
+											notes=getString(R.string.Tozan)+getString(R.string.B302TB99907)+getString(R.string.B99907TB18);
+										else if (pointb<62)
+											notes =getString(R.string.Tozan)+getString(R.string.B302TB99907b);
+										else 
+											notes=getString(R.string.Tozan)+getString(R.string.B302TB201);
+									}
+									else if (68<pointa&&pointa<=72){
+										notes=getString(R.string.ToGoChoMae);//comment for Kotsu
+										if (pointb<20)
+											notes=notes+getString(R.string.B201TB18);
+										else if (pointb<62)
+											notes=notes+getString(R.string.B201TB99907);
+										else
+											foundstop=0;
+									}									
 									else
-										foundstop=0;
-								}									
-								else
-									notes=getString(R.string.MatsubandaToMiyanouraKo);
+										notes=getString(R.string.MatsubandaToMiyanouraKo);
 									if (pointb<20){
 										if (pointa<68)
 											foundstop=0;
 										else
-										notes=notes+getString(R.string.B99907TB18);
+											notes=notes+getString(R.string.B99907TB18);
 									}
-								if ((pointa<20)|(68<pointb&&pointb<=72)|(62<pointb&&pointa!=70))
-									foundstop=0;
-								break;
-								// run -302 --> 300
+									if ((pointa<20)|(68<pointb&&pointb<=72)|(62<pointb&&pointa!=70))
+										foundstop=0;
+									break;
+									// run -302 --> 300
 								case -16:
 									notes=getString(R.string.ToMiyanouraKo);
 									if (pointb<20){
 										if (pointa<=99)
 											foundstop=0;
-										else
-											notes=notes+getString(R.string.B16TB18)+getString(R.string.SeasonalWait);
+										else if (pointb==68){
+											if (pointa>68)
+												notes=notes+getString(R.string.B16T99909);
+											else 
+												foundstop=0;
+										}
+										else											
+											notes=notes+getString(R.string.B16TB18);
 									}
 									if (pointa<=20)
 										foundstop=0;
@@ -889,12 +980,22 @@ public class MainActivity extends Activity {
 									if (pointb==70)
 										foundstop=0;
 									break;
-								//run -303 --> 300
+									//run -303 --> 300
 								case -17:
-									if (pointa==70)
-										notes=getString(R.string.Tozan)+getString(R.string.B304TB17);//TODO Add note for nonseasonal B303TB99908TB18
-									else
+									if (pointa==70){
+										notes=getString(R.string.Tozan)+getString(R.string.B304TB17);
+										flags=0;}
+									else{
 										notes=getString(R.string.ToSeaSide);
+										flags=30;
+										flags=0;
+									}
+									if (pointb==68){
+										if (pointa==70)
+											foundstop=0;
+										else
+											notes=notes+getString(R.string.B17T99910);
+								}	
 									if (pointb<19)
 										notes=notes+getString(R.string.B17TB18);
 									if (pointb==70||pointa<=20)
@@ -908,7 +1009,7 @@ public class MainActivity extends Activity {
 									if (26<=pointb&&pointb<=29)
 										foundstop=0;
 									break;
-								//run -304 -->300
+									//run -304 -->300
 								case -99909:
 									if (pointa==70)
 										notes=getString(R.string.Tozan)+getString(R.string.B305TB99909);
@@ -921,7 +1022,7 @@ public class MainActivity extends Activity {
 									else
 										notes=getString(R.string.MatsubandaToMiyanouraKo);
 									break;
-								//run -305 --> 300
+									//run -305 --> 300
 								case -19:
 									notes=getString(R.string.ToMiyanouraKo);
 									break;
@@ -962,7 +1063,7 @@ public class MainActivity extends Activity {
 			}
 			this.subAnswerString = subAnswerString;
 
-			//flags: 20/35 for irregular buses; 30 for seasonal buses, 0 for regular buses, -1 for no bus.
+			//flags: 20/35 for irregular buses; 30 for seasonal buses, 0 for regular buses, -1 for no bus. 99 for matsubanda
 			if (ok == -1) {
 				this.flags = -1;
 			} else {

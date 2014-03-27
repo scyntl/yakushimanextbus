@@ -544,7 +544,7 @@
 "run300":
 {"notes":"This bus line is operated from March through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -567,7 +567,7 @@
 "run999100":
 {"notes":"Take the bus bound for Miyanoura Port. If your stop is after Miyanoura Port (09:55), transfer there to the bus bound for Nagata (departs at 10:00).",
 	"run":-999100,
-	"flags":0,
+	"flags":99,
 	"stops":
 	[
 		{
@@ -2283,12 +2283,12 @@
 			"minutehand":"45"
 		},
 		{		
-			"stopid":29,
-			"hourhand":"4",
+			"stopid":26,
+			"hourhand":"14",
 			"minutehand":"02"
 		},
 		{		
-			"stopid":6,
+			"stopid":29,
 			"hourhand":"14",
 			"minutehand":"25"
 		},
@@ -2836,7 +2836,7 @@
 "run301":
 {"notes":"This bus line is operated from March through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -3528,7 +3528,7 @@
 "run302":
 {"notes":"This bus line is operated from March through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -3878,7 +3878,7 @@
 "run303":
 {"notes":"This bus line is operated from March through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -4232,7 +4232,7 @@
 "run304":
 {"notes":"This bus line is operated from March through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -4438,7 +4438,7 @@
 "run305":
 {"notes":"This bus line is operated from March through November. ",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -4640,7 +4640,7 @@
 "run306":
 {"notes":"This bus line is operated from March through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
@@ -4663,7 +4663,7 @@
 "run307":
 {"notes":"This bus line is operated from March through November.",
 	"run":300,
-	"flags":30,
+	"flags":0,
 	"stops":
 	[
 		{
