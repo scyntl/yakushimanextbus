@@ -2309,22 +2309,22 @@
 		},
 		{		
 			"stopid":20,
-			"hourhand":"12",
+			"hourhand":"13",
 			"minutehand":"58"
 		},
 		{		
 			"stopid":17,
-			"hourhand":"13",
+			"hourhand":"14",
 			"minutehand":"02"
 		},
 		{		
 			"stopid":14,
-			"hourhand":"13",
+			"hourhand":"14",
 			"minutehand":"09"
 		},
 		{		
 			"stopid":11,
-			"hourhand":"13",
+			"hourhand":"14",
 			"minutehand":"14"
 		},
 		{		
@@ -2800,36 +2800,6 @@
 			"stopid":20,
 			"hourhand":"14",
 			"minutehand":"33"
-		},
-		{		
-			"stopid":17,
-			"hourhand":"15",
-			"minutehand":"44"
-		},
-		{		
-			"stopid":14,
-			"hourhand":"15",
-			"minutehand":"51"
-		},
-		{		
-			"stopid":11,
-			"hourhand":"15",
-			"minutehand":"56"
-		},
-		{		
-			"stopid":8,
-			"hourhand":"16",
-			"minutehand":"02"
-		},
-		{		
-			"stopid":4,
-			"hourhand":"16",
-			"minutehand":"10"
-		},
-		{		
-			"stopid":1,
-			"hourhand":"16",
-			"minutehand":"12"
 		}
 	]
 },
@@ -3117,8 +3087,8 @@
 		},
 		{		
 			"stopid":68,
-			"hourhand":"15",
-			"minutehand":"33"
+			"hourhand":"13",
+			"minutehand":"50"
 		},
 		{		
 			"stopid":67,
@@ -4094,8 +4064,8 @@
 		},
 		{		
 			"stopid":68,
-			"hourhand":"18",
-			"minutehand":"13"
+			"hourhand":"16",
+			"minutehand":"40"
 		},
 		{		
 			"stopid":67,

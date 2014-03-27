@@ -22,7 +22,7 @@
     <string name="working">Searching . . .</string>
     <string name="change_time_button">Departs at:</string>
     <string name="current_time">Departs at: </string>
-    <string name="Explanation">These times are for Yakushima Kotsu Buses and were last updated on March, 6, 2014. I expect them to change again in the fall. I plan to add Matsubanda buses soon, so please check for updates. For current times and travel help, please call or visit a Yakushima Tourist Information Booth.</string>
+    <string name="Explanation">These times are for Yakushima Kotsu Buses and were last updated on March, 6, 2014. I expect them to change again in the fall. For current times and travel help, please call or visit a Yakushima Tourist Information Booth.</string>
     <string name="copyright">\nThis App created and maintained by Jenny at www.Yakushimalife.com \n It is not intended to take the place of a printed bus schedule. I cannot take responsibility for errors, but I appreciate if you can report them to me.</string>
     <string name="tagline">Yakushima Bus Times in a Click!</string>
     <string name="versionnumber">Version 2.0</string>

@@ -46,8 +46,8 @@
     	<string name="R12T13"> Transfer at any stop from Miyanoura Port (14:10) onwards. The bus for Oko-no-Taki will depart in about 75 minutes.</string>
     	<string name="B99905T12"> Transfer at Makino (13:55). The bus bound for Iwasaki Hotel departs at 14:50 in the opposite direction.</string>
     	<string name="R12T103"> Transfer at any stop from Miyanoura Port (14:10) to Oharamachi (14:15). The bus bound for Shiratani Unsuikyo will depart in 80~83 minutes.</string>
-    	<string name="R12T99907"> Transfer at any stop from Miyanoura Port (14:10) to Makino (). The Matsubanda bus to the Shizenkan (Museum) will depart in 38~40 minutes. Kotsu Bus passes cannot be used.</string>
-    	<string name="B999101T13"> Transfer at Oharamach (15:20). The bus bound for Oko-no-Taki departs at 15:30 in the opposite direction. If you are using a Kotsu Bus pass, take the bus from Shiratani that departs at 14:40 and stops at Oharamachi at 15:05. Transfer there.</string>
+    	<string name="R12T99907"> Transfer at any stop from Miyanoura Port (14:10) to Makino (14:50). The Matsubanda bus to the Shizenkan departs in 38~40 minutes. Kotsu Bus passes cannot be used.</string>
+    	<string name="B999101T13"> Transfer at Oharamachi (15:20). The bus bound for Oko-no-Taki departs at 15:30 in the opposite direction. If you are using a Kotsu Bus pass, take the bus from Shiratani that departs at 14:40 and stops at Oharamachi at 15:05. Transfer there.</string>
     	<string name="B201T13"> Transfer at Makino (15:48). The bus bound for Oko-no-Taki departs at 16:05 in the opposite direction.</string>
     	<string name="B99907T13"> Transfer at Makino (15:50). The bus bound for Oko-no-Taki departs at 16:05 in the opposite direction. If you are using a Kotsu Bus passe, take the bus from the Shizenkan that departs at 15:43 and stops at Makino at 15:48.</string>
     		<string name="R14T16"> Transfer at any stop from Miyanoura Port (15:45) onwards. The bus bound for Kurio-Bashi departs in about one hour.</string>
@@ -58,6 +58,7 @@
     <string name="ToHirauchi"> Take the bus bound for Hirauchi Kaichu Onsen.</string>
     	<string name="R15T18"> Transfer at any stop after leaving the Shizenkan. The bus bound for Kurio-Bashi will depart in about 66 minutes.</string>
     	<string name="R17T18"> Transfer at any stop from Miyanoura Port (17:35) onwards. The bus bound for Kurio-Bashi will depart in about 30~33 minutes.</string>
+    	<string name="B99909T17"> Transfer at Makino (17:40). The bus bound for Iwasai Hotel departs at 18:17.</string>
     	<string name="R99910T18"> Transfer at Makino (18:25). The bus bound for Kurio-Bashi departs at 18:50.</string>
     	<string name="B306T99910"> Transfer at the Shizenkan (18:05) The Matsubanda bus bound for Miyanoura Port departs at 18:20. Kotsu Bus passes cannot be used.</string>
     <string name="MatsubandaToAirport">Take the Matsubanda bus bound for the Airport. Kotsu Bus passes cannot be used.</string>
@@ -70,15 +71,16 @@
   	  	<string name="B5TB6"> Transfer at the last stop (09:35). The bus bound for Nagata departs at 10:00.</string>
     	<string name="B5T200"> Transfer at Makino (07:38). The bus bound for Kigen sugi departs at 09:21 in the opposite direction.</string>
   	  	<string name="B100TB6"> Transfer at the last stop (09:35). The Bus boun for Nagata departs at 10:00.</string>
-    	<string name="B7TB8"> Transfer at the last stop (10:20). The Bus boun for Nagata departs at 10:50.</string>
-    	<string name="B7T101"> Transfer at Oharamachi (10:13). The bus to Shiratani will departs at 10:30 in the opposite direction.</string>
+    	<string name="B99902TB6"> Transfer at the last stop (09:48). The Bus bound for Nagata departs at 10:00.</string>
+    	<string name="B7TB8"> Transfer at the last stop (10:20). The Bus bound for Nagata departs at 10:50.</string>
+    		<string name="B7T101"> Transfer at Oharamachi (10:13). The bus to Shiratani will departs at 10:30 in the opposite direction.</string>
 <string name="MISSING"></string>
     	<string name="B300TB99903"> Transfer at the Shizenkan (07:35). The Matsubanda bus bound for Miyanoura departs at 10:30. Kotsu Bus passes cannot be used.</string>
     	<string name="B10T304"> Transfer at Makino (11:58). The Matsubanda bus to the Shizenkan (Museum) departs at 12:08 in the opposite direction. Kotsu Bus passes cannot be used. The Arakawa Tozan bus departs from the Shizenkan at 13:00. This bus line is operated from March through November and requires a separate ticket.</string>
     	<string name="B10T201"> Transfer at Makino (11:58). The bus bound for Kigen Sugi departs at 13:34 in the opposite direction.</string>
     	<string name="B10T99905"> Transfer at Makino (11:58). The Matsubanda bus to the Shizenkan (Museum) departs at 12:08 in the opposite direction. Kotsu Bus passes cannot be used.</string>
     	<string name="B10T102"> Transfer at Oharamachi (12:36). The bus to Shiratani will departs at 14:00 in the opposite direction.</string>
-    	<string name="B200T10"> Transfer at GoChoMae (11:43). The bus bound for Miyanoura Port departs at 12:06</string>
+    	<string name="B200T10"> Transfer at GoChoMae (11:43). The bus bound for Miyanoura Port departs at 12:06.</string>
     	<string name="B10TB11"> Transfer at the last stop (12:43). The bus bound for Nagata departs at 12:55.</string>
     	<string name="B12T99906"> Transfer at Makino (13:08). The Matsubanda bus bound for the Shizenkan departs at 13:34 in the opposite direction. For a Kotsu bus, transfer to the bus bound for Kigen Sugi that departs from Makino at 13:34.</string>
     	<string name="B12T201"> Transfer at Makino (13:08). The bus bound for Kigen Sugi departs at 13:34 in the opposite direction.</string>
@@ -86,6 +88,7 @@
     	<string name="B14TB15"> Transfer at the last stop (15:17). The bus bound for Nagata departs at 15:40.</string>
     	<string name="B14T103"> Transfer at Oharamachi (15:10). The bus to Shiratani will departs at 15:40 in the opposite direction.</string>
     	<string name="B103TB15"> Transfer at the last stop (15:15). The bus bound for Nagata departs at 15:40.</string>
+    	<string name="B99906B15"> Transfer at any stop from Makino (13:55) to the last stop (14:33). The bus bound for Nagata departs in 63~67 minutes.</string>
     	<string name="B15T103"> Transfer at Oharamachi (15:33). The bus to Shiratani will departs at 15:40 in the opposite direction.</string>
     	<string name="B15T99909"> Transfer at Makino (14:58). The Matsubanda bus to the Shizenkan departs at 15:28 in the opposite direction. Kotsu Bus passes cannot be used.</string>
     	<string name="B302TB99907"> Transfer at the Shizenkan (15:35) to either the Kotsu Bus bound for GoChoMae (departs at 15:43) or the Matsubanda bus bound for Miyanoura Port (departs at 15:45).</string>
@@ -101,8 +104,9 @@
     	<string name="B304TB17"> Transfer at the Shizenkan (15:05). The bus bound for Miyanoura departs at 17:10. </string>
     <string name="ToSeaSide">Take the bus bound for Seaside Hotel. This bus only runs from March through November. See below for another bus.</string>
     	<string name="B17TB18"> Transfer at Miynoura Port (17:55). The bus bound for Nagata departs at 18:12.</string>
-    	<string name="B17T99910"> Transfer at Makino (17:28). The Matsubanda bus bound for the Shizenkan departs at 18:08 in the opposite direction. Kotsu Bus passes cannot be used.</string>
+    	<string name="B18T99910"> Transfer at Makino (17:28). The Matsubanda bus bound for the Shizenkan departs at 18:08 in the opposite direction. Kotsu Bus passes cannot be used.</string>
     	<string name="B103TB18"> Transfer at Miynoura Port (16:04). The bus bound for Nagata departs at 18:12.</string>
+    	<string name="B99908TB18"> Transfer at any stop from Makino (16:45) to the last stop (17:23). The bus bound for Nagata departs in 43~49 minutes.</string>
     	<string name="B306TB99910"> Transfer at the Shizenkan (18:05). The Matsubanda bus bound for the Airport at 18:20. Kotsu Bus passes cannot be used.</string>
     	<string name="B305TB99909"> Transfer at the Shizenkan (17:35). The Matsubanda bus bound for Miyanoura departs at 17:35. If you miss it, the next bus (18:20) only goes as far as the Airport. Kotsu Bus passes cannot be used.</string>
     	<string name="Tozan307">This is a supplemental Arakawa Tozan bus. This bus is only operated from July 20 through Aust 31. It requires a separate ticket.</string>

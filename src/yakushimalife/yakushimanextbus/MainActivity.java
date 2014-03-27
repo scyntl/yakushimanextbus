@@ -362,6 +362,9 @@ public class MainActivity extends Activity {
 			String subAnswerString = "";
 			ArrayList<String[]> startdata = new ArrayList<String[]>();
 			ArrayList<String[]> stopdata = new ArrayList<String[]>();
+			String hourhand = "0";
+			String minutehand = "0";
+
 			try {
 
 				JSONObject obj = new JSONObject(loadJSONFromAsset(anasset));
@@ -372,8 +375,8 @@ public class MainActivity extends Activity {
 				//Flags: 20=not regular; 30=March-November;0=regular.
 
 				String stopid = "0";
-				String hourhand = "0";
-				String minutehand = "0";
+				hourhand = "0";
+				minutehand = "0";
 				// Search the run for the start point.
 				for (int i = 0; i < jArray.length(); i++) {
 					stopid = jArray.getJSONObject(i).getString("stopid");
@@ -458,8 +461,12 @@ public class MainActivity extends Activity {
 									notes=getString(R.string.ToKurioBashi);
 									if (pointb>127)
 										notes=notes+getString(R.string.R5T6);
-									else if (68<=pointb&&pointb<=72) 
-										notes=notes+getString(R.string.R5T200);
+									else if (68<=pointb&&pointb<=72) {
+										if (pointa<62)
+											notes=notes+getString(R.string.R5T200);
+										else
+											foundstop=0;
+									}
 									else if (26<=pointb&&pointb<=29) {
 										if (pointa<20)
 											notes=notes+getString(R.string.R5T999100100);
@@ -480,8 +487,12 @@ public class MainActivity extends Activity {
 									break;
 								case 6:
 									notes=getString(R.string.ToOkonoTaki);
-									if (67<pointb&&pointb<73) 
-										notes=notes+getString(R.string.R6T200);
+									if (67<pointb&&pointb<73) {
+										if (pointa<62)
+											notes=notes+getString(R.string.R6T200);
+										else
+											foundstop=0;
+									}
 									if (68<=pointa&&pointa<=72)
 										foundstop=0;
 									break;
@@ -517,8 +528,7 @@ public class MainActivity extends Activity {
 											foundstop=0;
 										else{
 											notes=notes+getString(R.string.R7T99904);
-											hourhand="10";
-											minutehand="53";											
+											stopdata.set(0, new String[] {stopdata.get(0)[0], "10", "53"});
 										}
 									}
 									if ((25<pointb&&pointb<30)|(pointa>98)) foundstop=0;
@@ -546,9 +556,14 @@ public class MainActivity extends Activity {
 									if (67<pointb&&pointb<73) foundstop=0;
 									break;
 								case 99905:
-									if (pointa<20) 
-										notes=getString(R.string.ToKurioBashi)+getString(R.string.R9T99905);
-									else notes=getString(R.string.MatsubandaToShizenkan);
+									if (pointa<20) {
+										if (pointb==68||pointb==70)
+											notes=getString(R.string.ToKurioBashi)+getString(R.string.R9T99905);
+										else
+											foundstop=0;
+									}
+									else 
+										notes=getString(R.string.MatsubandaToShizenkan);
 									if (pointb==70) 
 										notes=notes+getString(R.string.R99905T304);
 									if(pointb<20)
@@ -569,24 +584,23 @@ public class MainActivity extends Activity {
 									case 26:
 										if (pointa<20){
 											notes=notes+getString(R.string.R10T102);
-											hourhand="14";
-											minutehand="02";}
+											stopdata.set(0, new String[] {stopdata.get(0)[0], "14", "02"});
+										}
 										else 
 											foundstop=0;
 										break;
 									case 29:
 										if (pointa<20){
 											notes=notes+getString(R.string.R10T102);
-											hourhand="14";
-											minutehand="25";}
+											stopdata.set(0, new String[] {stopdata.get(0)[0], "14", "25"});
+										}
 										else 
 											foundstop=0;
 										break;
 									case 68:
 										if (pointa<20){
 											notes=notes+getString(R.string.R10T99906);
-											hourhand="13";
-											minutehand="33";
+											stopdata.set(0, new String[] {stopdata.get(0)[0], "13", "33"});
 										}
 										break;
 									}
@@ -605,19 +619,33 @@ public class MainActivity extends Activity {
 									break;
 								case 11:
 									notes=getString(R.string.ToOkonoTaki);
-									if (68<=pointb&&pointb<=72)
-										notes=notes+getString(R.string.R11T201);
 									switch (pointb){
 									case 68:
-										notes=notes+getString(R.string.R11T201);
-										hourhand="13";
-										minutehand="39";
+										if (pointa<62){
+											notes=notes+getString(R.string.R11T201);
+											stopdata.set(0, new String[] {stopdata.get(0)[0], "13", "39"});
+										}
+										else
+											foundstop=0;
+										break;
 									case 69:
-										notes=notes+getString(R.string.R11T201);
+										if (pointa<62)
+											notes=notes+getString(R.string.R11T201);
+										else
+											foundstop=0;
+										break;
 									case 71:
-										notes=notes+getString(R.string.R11T201);
+										if (pointa<62)
+											notes=notes+getString(R.string.R11T201);
+										else
+											foundstop=0;
+										break;
 									case 72:
-										notes=notes+getString(R.string.R11T201);
+										if (pointa<62)
+											notes=notes+getString(R.string.R11T201);
+										else
+											foundstop=0;
+										break;
 									}
 									if(69<pointa&&pointa<73)
 										foundstop=0;
@@ -644,11 +672,14 @@ public class MainActivity extends Activity {
 									else if (25<pointb&&pointb<30)
 										notes=notes+getString(R.string.R12T103);
 									else if (pointb==68){
-										notes=notes+getString(R.string.R12T99907);
-										hourhand="15";
-										minutehand="33";
-										if (pointa>19)
-											flags=12;//TODO set code for this flag.
+										if (pointa==67)
+											foundstop=0;
+										else{
+											notes=notes+getString(R.string.R12T99907);
+											stopdata.set(0, new String[] {stopdata.get(0)[0], "15", "33"});
+											if (pointa>19)
+												flags=12;//TODO set code for this flag.
+										}
 									}
 									if ((pointa>=99) | (26<=pointa&&pointa<=29) | (25<pointb&&pointb<30&&pointa>=20))
 										foundstop=0;
@@ -710,6 +741,14 @@ public class MainActivity extends Activity {
 									if (pointb>99)
 										notes=notes+getString(R.string.R17T18);
 									if (pointa>98)
+										foundstop=0;
+									if (pointa==68){
+										if (pointb<=99)
+											notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B99909T17);
+										else
+											foundstop=0;
+										}
+									if (pointb==68)
 										foundstop=0;
 									break;
 								case 18:
@@ -788,6 +827,14 @@ public class MainActivity extends Activity {
 									break;
 								case -99902:
 									notes=getString(R.string.MatsubandaToMiyanouraKo);
+									if (pointb<20){
+										if (pointa>20)
+											notes=notes+getString(R.string.B99902TB6);
+										else
+											foundstop=0;
+									}
+									if (pointa<=20)
+										foundstop=0;
 									break;
 								case -7:
 									notes=getString(R.string.ToMiyanouraKo);
@@ -823,23 +870,19 @@ public class MainActivity extends Activity {
 											switch (pointb) {
 											case 72:
 												notes=notes+getString(R.string.B10T201);
-												hourhand="14";
-												minutehand="32";
+												stopdata.set(0, new String[] {stopdata.get(0)[0], "14", "32"});
 												break;
 											case 71:
 												notes=notes+getString(R.string.B10T201);
-												hourhand="14";
-												minutehand="12";
+												stopdata.set(0, new String[] {stopdata.get(0)[0], "14", "12"});
 												break;
 											case 70:
 												notes=notes+getString(R.string.B10T304);
-												hourhand="13";
-												minutehand="35";
+												stopdata.set(0, new String[] {stopdata.get(0)[0], "13", "35"});
 												break;
 											case 69:
 												notes=notes+getString(R.string.B10T201);
-												hourhand="14";
-												minutehand="06";
+												stopdata.set(0, new String[] {stopdata.get(0)[0], "14", "06"});
 												break;
 											case 68:
 												notes=notes+getString(R.string.B10T99905);
@@ -850,8 +893,12 @@ public class MainActivity extends Activity {
 									}
 									else if (pointa<=68&&pointa<=72)
 										notes=getString(R.string.ToGoChoMae)+getString(R.string.B200T10);										
-									if (pointb<20)
-										notes=notes+getString(R.string.B10TB11);
+									if (pointb<20){
+										if (pointa>20)
+											notes=notes+getString(R.string.B10TB11);
+										else 
+											foundstop=0;
+									}
 									if (((69<=pointb&&pointb<=72)|(pointb==68)|(26<=pointb&&pointb<=29))&(pointa!=129) | (pointa<20) | (26<=pointa&&pointa<=29))
 										foundstop=0;									
 									break;
@@ -900,21 +947,26 @@ public class MainActivity extends Activity {
 								case -15:
 									if (26<=pointa&&pointa<=29)
 										notes=getString(R.string.B103TB15);
-									else
+									else if (pointa==68){
+										if (pointb<20)
+											notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B99906B15);
+										else
+											foundstop=0;
+									}
+									else									
 										notes=getString(R.string.ToNagata);
 									switch (pointb){
 									case 26:
 										notes=notes+getString(R.string.B15T103);
-										hourhand="15";
-										minutehand="42";
+										stopdata.set(0, new String[] {stopdata.get(0)[0], "15", "42"});
 										break;
 									case 29:
 										notes=notes+getString(R.string.B15T103);
-										hourhand="16";
-										minutehand="05";
+										stopdata.set(0, new String[] {stopdata.get(0)[0], "16", "05"});
 										break;
 									case 68:
 										notes=notes+getString(R.string.B15T99909);
+										stopdata.set(0, new String[] {stopdata.get(0)[0], "15", "33"});
 										break;
 									}
 									break;
@@ -960,15 +1012,15 @@ public class MainActivity extends Activity {
 									if (pointb<20){
 										if (pointa<=99)
 											foundstop=0;
-										else if (pointb==68){
-											if (pointa>68)
-												notes=notes+getString(R.string.B16T99909);
-											else 
-												foundstop=0;
-										}
-										else											
-											notes=notes+getString(R.string.B16TB18);
 									}
+									else if (pointb==68){
+										if (pointa>68)
+											notes=notes+getString(R.string.B16T99909);
+										else 
+											foundstop=0;			
+									}
+									else
+										notes=notes+getString(R.string.B16TB18);
 									if (pointa<=20)
 										foundstop=0;
 									break;
@@ -990,12 +1042,6 @@ public class MainActivity extends Activity {
 										flags=30;
 										flags=0;
 									}
-									if (pointb==68){
-										if (pointa==70)
-											foundstop=0;
-										else
-											notes=notes+getString(R.string.B17T99910);
-								}	
 									if (pointb<19)
 										notes=notes+getString(R.string.B17TB18);
 									if (pointb==70||pointa<=20)
@@ -1004,8 +1050,22 @@ public class MainActivity extends Activity {
 								case -18:
 									if (26<=pointa&&pointa<=29)
 										notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B103TB18);
+									else if (pointa==68){
+										if (pointb<20)
+											notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B99908TB18);
+										else
+											foundstop=0;
+									}
 									else
 										notes=getString(R.string.ToNagata);
+									if (pointb==68){
+										if (pointa>68){
+											notes=notes+getString(R.string.B18T99910);
+											stopdata.set(0, new String[] {stopdata.get(0)[0], "18", "13"});
+										}
+										else 
+											foundstop=0;
+									}
 									if (26<=pointb&&pointb<=29)
 										foundstop=0;
 									break;
@@ -1050,8 +1110,8 @@ public class MainActivity extends Activity {
 				kk = stopdata.get(0);
 				String stophour = kk[1];
 				String stopminute = kk[2];
-				Integer.parseInt(stophour);
-				Integer.parseInt(stopminute);
+//				Integer.parseInt(stophour);
+//				Integer.parseInt(stopminute);
 
 				subAnswerString ="Depart-Arrive </dt><br>" + departhour + ":"
 						+ departminute + " - " + stophour + ":" + stopminute
