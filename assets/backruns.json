@@ -1479,6 +1479,16 @@
 			"minutehand":"08"
 		},
 		{		
+			"stopid":29,
+			"hourhand":"14",
+			"minutehand":"25"
+		},
+		{		
+			"stopid":26,
+			"hourhand":"14",
+			"minutehand":"02"
+		},
+		{		
 			"stopid":25,
 			"hourhand":"11",
 			"minutehand":"09"
@@ -1522,6 +1532,11 @@
 			"minutehand":"00"
 		},
 		{		
+			"stopid":70,
+			"hourhand":"13",
+			"minutehand":"35"
+		},
+		{		
 			"stopid":69,
 			"hourhand":"11",
 			"minutehand":"06"
@@ -1545,6 +1560,16 @@
 			"stopid":62,
 			"hourhand":"11",
 			"minutehand":"43"
+		},
+		{		
+			"stopid":29,
+			"hourhand":"14",
+			"minutehand":"25"
+		},
+		{		
+			"stopid":26,
+			"hourhand":"14",
+			"minutehand":"02"
 		}
 	]
 },
@@ -1924,7 +1949,7 @@
 		{		
 			"stopid":71,
 			"hourhand":"11",
-			"minutehand":"10"
+			"minutehand":"00"
 		},
 		{		
 			"stopid":70,
@@ -3515,6 +3540,49 @@
 			"stopid":68,
 			"hourhand":"15",
 			"minutehand":"35"
+		}
+	]
+},
+"run103":
+{"notes":"Take the bus bound for Miyanoura Port. If your stop is after Miyanoura Port (15:15), get off at any stop after Oharamachi. The bus bound for Nagata will depart in 25~28 minutes.",
+	"run":-100,
+	"flags":0,
+	"stops":
+	[
+		{
+			"stopid":1000,
+			"hourhand":"",
+			"minutehand":""
+		},
+		{
+			"stopid":29,
+			"hourhand":"16",
+			"minutehand":"10"
+		},
+		{
+			"stopid":26,
+			"hourhand":"16",
+			"minutehand":"33"
+		},
+		{
+			"stopid":25,
+			"hourhand":"16",
+			"minutehand":"35"
+		},
+		{
+			"stopid":23,
+			"hourhand":"16",
+			"minutehand":"37"
+		},
+		{
+			"stopid":21,
+			"hourhand":"16",
+			"minutehand":"39"
+		},
+		{
+			"stopid":20,
+			"hourhand":"16",
+			"minutehand":"45"
 		}
 	]
 },

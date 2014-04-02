@@ -851,6 +851,11 @@
 			"minutehand":"59"
 		},
 		{
+			"stopid":70,
+			"hourhand":"07",
+			"minutehand":"00"
+		},
+		{
 			"stopid":72,
 			"hourhand":"10",
 			"minutehand":"19"
@@ -1255,6 +1260,11 @@
 			"stopid":68,
 			"hourhand":"10",
 			"minutehand":"13"
+		},
+		{		
+			"stopid":70,
+			"hourhand":"13",
+			"minutehand":"35"
 		}
 	]
 },
@@ -2785,6 +2795,16 @@
 			"minutehand":""
 		},
 		{
+			"stopid":26,
+			"hourhand":"12",
+			"minutehand":"03"
+		},
+		{
+			"stopid":29,
+			"hourhand":"11",
+			"minutehand":"40"
+		},
+		{
 			"stopid":62,
 			"hourhand":"13",
 			"minutehand":"26"
@@ -3089,7 +3109,7 @@
 },
 "run99907":
 {"notes":"This bus is operated by Matsubanda. For another bus:\n",
-	"run":99907,
+	"run":99901,
 	"flags":99,
 	"stops":
 	[{
@@ -3221,16 +3241,6 @@
 			"minutehand":"26"
 		},
 		{
-			"stopid":29,
-			"hourhand":"14",
-			"minutehand":"55"
-		},
-		{
-			"stopid":26,
-			"hourhand":"15",
-			"minutehand":"16"
-		},
-		{
 			"stopid":23,
 			"hourhand":"15",
 			"minutehand":"28"
@@ -3239,6 +3249,16 @@
 			"stopid":25,
 			"hourhand":"15",
 			"minutehand":"30"
+		},
+		{
+			"stopid":26,
+			"hourhand":"15",
+			"minutehand":"16"
+		},
+		{
+			"stopid":29,
+			"hourhand":"14",
+			"minutehand":"55"
 		},
 		{
 			"stopid":30,
@@ -3311,14 +3331,9 @@
 			"minutehand":"05"
 		},
 		{		
-			"stopid":72,
-			"hourhand":"14",
-			"minutehand":"50"
-		},
-		{		
-			"stopid":71,
+			"stopid":68,
 			"hourhand":"15",
-			"minutehand":"10"
+			"minutehand":"45"
 		},
 		{		
 			"stopid":69,
@@ -3326,9 +3341,14 @@
 			"minutehand":"16"
 		},
 		{		
-			"stopid":68,
+			"stopid":71,
 			"hourhand":"15",
-			"minutehand":"45"
+			"minutehand":"10"
+		},
+		{		
+			"stopid":72,
+			"hourhand":"14",
+			"minutehand":"50"
 		},
 		{		
 			"stopid":73,
@@ -3447,7 +3467,7 @@
 },
 "run99908":
 {"notes":"This bus is operated by Matsubanda. For another bus:\n",
-	"run":99908,
+	"run":99901,
 	"flags":99,
 	"stops":
 	[{
@@ -3762,7 +3782,7 @@
 },
 "run99909":
 {"notes":"This bus is operated by Matsubanda. For another bus:\n",
-	"run":99909,
+	"run":99901,
 	"flags":99,
 	"stops":
 	[{
@@ -4145,7 +4165,7 @@
 },
 "run99910":
 {"notes":"This bus is operated by Matsubanda. For another bus:\n",
-	"run":99910,
+	"run":99901,
 	"flags":99,
 	"stops":
 	[{
