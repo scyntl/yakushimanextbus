@@ -21,23 +21,23 @@
     <string name="listall_button">全部の便一覧</string>
     <string name="change_time_button">出発時間：</string>
     <string name="current_time">出発時間： </string>
-    <string name="Explanation">このアプリは2014年3月6日に更新したものです。屋久島交通バスの時間は、秋になったらまた変わるかもしれないので、アップデートを頻繁に行って下さい。また、このアプリは、まつばんだバスを扱っていませんが、将来、扱うように励んでおります。ご理解よろしくお願いします。</string>
+    <string name="Explanation">このアプリは2014年3月6日に更新したものです。ダイヤは、秋になったらまた変わるかもしれないので、アップデートを頻繁に行って下さい。ご理解よろしくお願いします。</string>
     <string name="copyright">\nこちらの情報は、バス会社の時刻表を元に個人で作成しております。アプリ内の情報における責任は、一切負いかねます。</string>
-    <string name="tagline">屋久島交通のバスを調べよう！</string>
+    <string name="tagline">屋久島のバスを調べましょう！</string>
 
     <string name="notedefault">※ご注意：このアプリは次のバスを示します。次のバスと一番適切なバスが一致しない場合もあります。</string>
     <string name="notewalking">※ヒント：少し歩いても良ければ、Aコープの代わりに小原町バス停は便利かもしれません。</string>
     <string name="noteanboport">※ヒント：安房港に止まる便は少ないですので、その代わりに合庁前か安房のご利用は便利かもしれません。</string>
     <string name="noteokonotaki">※ヒント：大川の滝まに止まる便は少ないです。栗生橋まではかなり距離がありますが、栗生橋が終点・発展となる便は多いです。</string>
 	<string name="startequalsstop">出発のバス停と目的のバス停は同じです。</string>
-<string name="about">このアプリは屋久島交通の時刻表と共にお使い下さい。情報における責任は、一切負いかねます。もし、不備がある場合は、こちらへご連絡をお願いします。 \n yakushimalife@gmail.com!</string>
+<string name="about">このアプリは観光協会が提供する時刻表と共にお使い下さい。情報における責任は、一切負いかねます。もし、不備がある場合は、こちらへご連絡をお願いします。 \n yakushimalife@gmail.com!</string>
 
 <string name="buspasses">満喫乗車券（フリーパス）</string>
 <string name="buspasscontent">一日乗り放題：2千円 \n 3日間乗り放題：3千円 \n 4日間乗り放題：4千円 （お子様は半額）\n*満喫乗車券は車内でご購入はできません。観光案内ブース等で販売されています。屋久島交通による運行する便のみのご利用となります。また、荒川登山口まで・からの便にはご利用できません。\nフリーパスの購入で屋久杉自然館か白谷雲水峡かヤクスギランドのいずれか一ヶ所の入金から100円割引券をもらいます。</string>
 <string name="bustours">観光バスツアー</string>
 <string name="bustourscontent">まつばんだ交通は午前・午後・一日コースのバスツアーを提供しています。屋久島交通は一日コースのバスツアーを提供しています。大人の料金は、半日2,000円から3,500円まで、一日3,500円となり、食事と施設入金は別です。\n\n詳細は観光協会、またはまつばんだ交通か屋久島交通までご連絡下さい。</string>
 <string name="arakawa">荒川登山線</string>
-<string name="arakawacontent">3月から11月まで、荒川登山口までの交通はバスとタクシーのみとなります。一般の車は入れませんのでご注意下さい。バス券は片道850円となります。乗る前に観光案内所でご購入下さい。</string>
+<string name="arakawacontent">3月から11月まで、荒川登山口までの交通はバスとタクシーのみとなります。一般の車は入れませんのでご注意下さい。バス券は片道870円となります。乗る前に観光案内所でご購入下さい。</string>
 
 <string name="howto">バスのご利用の際</string>
 <string name="howtocontent">乗る時、整理券を取って下さい。おりる時、両替を行ってバス代を支払って下さい。２千円以上のお札は利用できません。乗り放題のパス等をご利用の方はバスを乗る前に購入下さい。</string>

@@ -623,6 +623,8 @@ public class MainActivity extends Activity {
 											notes=notes+getString(R.string.R10T99906);
 											stopdata.set(0, new String[] {stopdata.get(0)[0], "13", "33"});
 										}
+										else
+											foundstop=0;
 										break;
 									}
 									if (68<pointb&&pointb<73)
@@ -708,13 +710,11 @@ public class MainActivity extends Activity {
 									else if (25<pointb&&pointb<30)
 										notes=notes+getString(R.string.R12T103);
 									else if (pointb==68){
-										if (pointa==67)
+										if (pointa>=20)
 											foundstop=0;
 										else{
 											notes=notes+getString(R.string.R12T99907);
 											stopdata.set(0, new String[] {stopdata.get(0)[0], "15", "33"});
-											if (pointa>19)
-												flags=12;//TODO set code for this flag.
 										}
 									}
 									if ((pointa>=99) | (26<=pointa&&pointa<=29) | (25<pointb&&pointb<30&&pointa>=20))
@@ -731,13 +731,15 @@ public class MainActivity extends Activity {
 											notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B999101T13);
 									}
 									//There is a Kotsu bus that leaves a few minutes earlier.
+									else if (pointb==68)
+										foundstop=0;
 									else if (69<=pointa&&pointa<=72)
 										notes=getString(R.string.ToGoChoMae)+getString(R.string.B201T13);
 									else if (pointa==68)
 										notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B99907T13);
-									else
+									else 
 										notes=getString(R.string.ToOkonoTaki);
-									if ((25<pointb&&pointb<30)|(69<pointb&&pointb<73))
+									if ((25<pointb&&pointb<30)|(67<=pointb&&pointb<=72))
 										foundstop=0;
 									break;
 									//run 103 --> case 100
@@ -748,8 +750,8 @@ public class MainActivity extends Activity {
 										notes=notes+getString(R.string.R14T16);
 									else if (pointb==68){
 										notes=notes+getString(R.string.R14T99909);
-										if (pointa>19)
-											flags=14;//TODO set code for this flag.
+										if (pointa>=20)
+											foundstop=0;
 									}
 									if ((pointa>98)|(pointa==68))
 										foundstop=0;
@@ -764,6 +766,8 @@ public class MainActivity extends Activity {
 										else
 											notes=getString(R.string.ToMiyanouraKo)+getString(R.string.B103T16);
 									}
+									else if (pointb==68)
+										foundstop=0;
 									else if (pointa==68)
 										notes=getString(R.string.MatsubandaToMiyanouraKo)+getString(R.string.B99908T16);
 									else										
@@ -1186,7 +1190,6 @@ public class MainActivity extends Activity {
 								}	
 
 
-								//TODO ADD RUNS BTN ARAKAWA AND KIGEN SUGI AN SHIRATANI.
 								break;
 							}
 						}

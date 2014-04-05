@@ -25,21 +25,21 @@
     <string name="Explanation">These times are for Yakushima Kotsu Buses and were last updated on March, 6, 2014. I expect them to change again in the fall. For current times and travel help, please call or visit a Yakushima Tourist Information Booth.</string>
     <string name="copyright">\nThis App created and maintained by Jenny at www.Yakushimalife.com \n It is not intended to take the place of a printed bus schedule. I cannot take responsibility for errors, but I appreciate if you can report them to me.</string>
     <string name="tagline">Yakushima Bus Times in a Click!</string>
-    <string name="versionnumber">Version 2.0</string>
+    <string name="versionnumber">Version 3.0</string>
 
     <string name="notedefault">Note that this App only shows the next bus, not nescesarily the best bus.</string>
     <string name="notewalking">Tip: If you do not mind walking, try using Oharamachi instead of A-Coop Mae.</string>
     <string name="noteanboport">Tip: Few buses stop at Anbo Port, but many stop at Gochomae and Anbo, which are a short walk away.</string>
     <string name="noteokonotaki">Tip: Few buses stop at Oko-no-Taki. Many stop at Kuriobashi, which is a long walk away.</string>
 	<string name="startequalsstop">Departing Stop and Final Stop must be different.</string>
-<string name="about">It is not intended to take the place of a printed bus schedule. </string>
+<string name="about">It is not intended to take the place of a printed bus schedule available at Tourist Information Booths. </string>
 
 <string name="buspasses">Bus Passes</string>
 <string name="buspasscontent">1-Day passes cost 2,000 yen.\n3-Day passes cost 3,000 yen. \n4-Day passes cost 4,000 yen. \n*Passes cannot be purchased on the bus. Buy them at a Tourist Information Booth. They can only be used for Kotsu buses, and they cannot be used for buses to/from the Arakawa Trail Head. \nPrice includes 100 yen off admission for one park or the Yakusugi Museum. Children in elementary school pay half price.</string>
 <string name="bustours">Bus Tours</string>
 <string name="bustourscontent">Half-day and full-day bus tours are operated in Japanese by Matsubanda and Yakushima Kotsu. Adult prices range from 2,000 yen and 3,500 yen for half day tours by Matsubanda, to 4,500 yen for full day tours by either Matsubanda or Yakushima Kotsu. Lunch and admission fees not included.\n\nFor more information please contact either the Tourism Association or Matsubanda or Yakushima Kotsu directly.</string>
 <string name="arakawa">Arakawa Trail Head Buses</string>
-<string name="arakawacontent">From March through November traffic to the trail head is limited to buses and taxies. One-way bus tickets cost 850 yen. Advance purchase at a Tourist Information Booth is encouraged.</string>
+<string name="arakawacontent">From March through November traffic to the trail head is limited to buses and taxies. One-way bus tickets cost 870 yen. Advance purchase at a Tourist Information Booth is encouraged.</string>
 
 <string name="howto">How to Ride the Bus</string>
 <string name="howtocontent">Take a ticket when you board. Push the stop button when the bus reaches your destination. Pay the fair listed for the number on your ticket. You cannot use bills larger than 1,000 yen. If you need change for smaller amounts, you can use the change machine next to the driver when the bus reaches your stop. If you want to use a bus pass, you must buy it before boarding the bus. Children in elementary school pay half price.</string>
